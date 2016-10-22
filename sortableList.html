@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Sortable - Default functionality</title>
+  
+  <style>
+    #sortable { list-style-type: none; border-spacing: 0 5px; }
+    #sortable > li { background-color: aqua; }
+    #sortable > li > .col:first-child { border-top-left-radius: 0.4ex; border-bottom-left-radius: 0.4ex; }
+    #sortable > li > .col:last-child { border-top-right-radius: 0.4ex; border-bottom-right-radius: 0.4ex; }
+      
+    #sortable { display: table; }
+    #sortable > li { display: table-row; }
+    .col { display: table-cell; padding: 5px; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+      function sortedCallback(event, ui) {
+          //console.log(event);
+          //console.log(ui);
+          console.log(event.target.children);
+          children = event.target.children;
+          for (var i=0; i<children.length; i++) {
+              node = children[i];
+              console.log(node.innerHTML);
+          }
+      }
+
+    $( function() {
+      $( "#sortable" ).sortable({stop: sortedCallback});
+      $( "#sortable" ).disableSelection();
+    } );
+  </script>
+  
+  <script>
+    function encodeList() {
+      var encoded='';
+      $('#sortable > li').each(function (number, element) {
+        if (number>0) encoded += "\n";
+        $( '.col', element ).each(function (number, element) {
+          if (number>0) encoded += "\t";
+          encoded += $(element).text();
+        });
+      });
+      return encoded;
+    }
+    
+    function decodeList(encoded) {
+      $('#sortable').empty();
+      lines = encoded.split("\n");
+      lines.forEach(function(obj, idx) {
+        nodeRow = $('<li>');
+
+        cols = obj.split("\t");
+        cols.forEach(function(obj, idx) {
+          nodeCol = $('<span>').addClass('col');
+          nodeCol.text(obj);
+          nodeRow.append(nodeCol);
+        });
+
+        $('#sortable').append(nodeRow);
+      });
+    }
+    
+    $( function() {
+      $('#butt').click(function () {
+        encoded = encodeList();
+        $('#test').val(encoded);
+      });
+      $('#butt2').click(function () {
+        encoded = $('#test').val();
+        decodeList(encoded);
+      })
+    } );
+  </script>
+  <script>
+    $( function() {
+      $('#butt3').click(function() {
+        url = 'https://docs.google.com/a/lssh.tp.edu.tw/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/export?format=csv&id=1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA&gid=1446184689';
+        $.get(url, function(data) {
+          $('#test').val(data);
+        });
+      });
+    } );
+    
+    $( function() {
+      $('#butt4').click(function() {
+        url = 'https://docs.google.com/a/lssh.tp.edu.tw/forms/d/e/1FAIpQLSes7I2sVrDrjNYAXIhLIcpyD1n5o6RYIAkm2Dk3BHqgljjkwg/formResponse';
+        data = {'entry.422715126': "id", 'entry.693107581': "pw", 'entry.657943876': "data"};
+        /*
+        $.post(url, data, function(data) {
+          //
+        }, "xml");
+        */
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: data,
+          success: function() {},
+          dataType: "xml",
+          crossDomain: true
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <ul id="sortable">
+    <li><span class="col">1</span><span class="col">1, 1</span></li>
+    <li><span class="col">2</span><span class="col">Item 2</span></li>
+    <li class="ui-state-defaultt"><span class="col">iii 3</span><span class="col">Item 3</span></li>
+    <li class="ui-state-defaultt"><span class="col">4</span><span class="col">Item 4</span></li>
+  </ul>
+  
+  <textarea id="test">
+  </textarea>
+  <button id="butt">encode</button>
+  <button id="butt2">decode</button>
+  <button id="butt3">getData</button>
+  <button id="butt4">postData</button>
+</body>
+</html>
