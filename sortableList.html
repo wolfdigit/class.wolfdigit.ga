@@ -6,8 +6,9 @@
   <title>jQuery UI Sortable - Default functionality</title>
   
   <style>
-    #sortable { list-style-type: none; border-spacing: 0 5px; }
-    #sortable > li { background-color: aqua; }
+    #sortable { /*list-style-type: none;*/ border-spacing: 0 5px; }
+    #sortable > li { background-color: azure; }
+    #sortable > li.active { background-color: aqua; }
     #sortable > li > .col:first-child { border-top-left-radius: 0.4ex; border-bottom-left-radius: 0.4ex; }
     #sortable > li > .col:last-child { border-top-right-radius: 0.4ex; border-bottom-right-radius: 0.4ex; }
       
@@ -18,20 +19,7 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
-      function sortedCallback(event, ui) {
-          //console.log(event);
-          //console.log(ui);
-          console.log(event.target.children);
-          children = event.target.children;
-          for (var i=0; i<children.length; i++) {
-              node = children[i];
-              console.log(node.innerHTML);
-          }
-      }
-
     $( function() {
-      $( "#sortable" ).sortable({stop: sortedCallback});
-      $( "#sortable" ).disableSelection();
     } );
   </script>
   
@@ -41,8 +29,9 @@
       $('#sortable > li').each(function (number, element) {
         if (number>0) encoded += "\n";
         $( '.col', element ).each(function (number, element) {
-          if (number>0) encoded += "\t";
-          encoded += $(element).text();
+          if (number==0) return;
+          if (number>1) encoded += "\t";
+          encoded += $(element).text().trim();
         });
       });
       return encoded;
@@ -53,6 +42,7 @@
       lines = encoded.split("\n");
       lines.forEach(function(obj, idx) {
         nodeRow = $('<li>');
+        nodeRow.append('<span class="col">#'+(idx+1)+':</span>')
 
         cols = obj.split("\t");
         cols.forEach(function(obj, idx) {
@@ -63,63 +53,212 @@
 
         $('#sortable').append(nodeRow);
       });
+      if (pw0==null||pw==pw0) {
+        $('#sortable > li').css('cursor', 'move');
+      }
     }
-    
-    $( function() {
-      $('#butt').click(function () {
-        encoded = encodeList();
-        $('#test').val(encoded);
-      });
-      $('#butt2').click(function () {
-        encoded = $('#test').val();
-        decodeList(encoded);
-      })
-    } );
   </script>
   <script>
-    $( function() {
-      $('#butt3').click(function() {
-        url = 'https://docs.google.com/a/lssh.tp.edu.tw/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/export?format=csv&id=1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA&gid=1446184689';
-        $.get(url, function(data) {
-          $('#test').val(data);
-        });
+    var cacheFile=null;
+    var loading=false;
+    function downloadData_real(action=null) {
+      url = 'https://docs.google.com/a/lssh.tp.edu.tw/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/export?format=csv&id=1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA&gid=1446184689';
+      ajaxBack = function(data) {
+        cacheFile = data;
+        if (action!=null) {
+          action();
+        }
+      };
+      $.get(url, ajaxBack);
+    }
+    function downloadData(id="id", type="type", action=null) {
+      if (cacheFile==null) {
+        if (!loading) {
+          loading = true;
+          downloadData_real(function() {
+            loading = false;
+            //downloadData(id, type, action);
+          });
+        }
+        setTimeout(function() {
+          downloadData(id, type, action);
+        }, 100);
+        return;
+      }
+      lines = cacheFile.split("\n");
+      lines.reverse();
+      retv = null;
+      lines.some(function(obj, idx) {
+        cols = obj.trim().split(",");
+        if (cols[2]==id && cols[3]==type) {
+          retv = decodeURIComponent(cols[4]);
+          return true;
+        }
       });
-    } );
+      if (action!=null) {
+        action(retv);
+      }
+    }
     
-    $( function() {
-      $('#butt4').click(function() {
-        url = 'https://docs.google.com/a/lssh.tp.edu.tw/forms/d/e/1FAIpQLSes7I2sVrDrjNYAXIhLIcpyD1n5o6RYIAkm2Dk3BHqgljjkwg/formResponse';
-        data = {'entry.422715126': "id", 'entry.693107581': "pw", 'entry.657943876': "data"};
-        /*
-        $.post(url, data, function(data) {
-          //
-        }, "xml");
-        */
-        $.ajax({
-          type: "POST",
-          url: url,
-          data: data,
-          success: function() {},
-          dataType: "xml",
-          crossDomain: true
+    function uploadData(id="id", type="type", data=null, action=null) {
+      if (!(pw0==null||pw==pw0)) return;
+      cacheFile = null;
+      url = 'https://docs.google.com/a/lssh.tp.edu.tw/forms/d/e/1FAIpQLSes7I2sVrDrjNYAXIhLIcpyD1n5o6RYIAkm2Dk3BHqgljjkwg/formResponse';
+      postData = {'entry.422715126': id, 'entry.673226051': type, 'entry.657943876': encodeURIComponent(data)};
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: postData
+      }).always(function(data){
+        if (action!=null) action();
+      });
+    }
+  </script>
+  <script>
+    var id=null;
+    var pw=null;
+    var pw0=null;
+    function sortedCallback(event, ui) {
+      $('#text').val(encodeList());
+      uploadData(id, "data", $('#text').val(), function() {
+        downloadData(id, "data", function(encoded) {
+          $('#text').val(encoded);
+          decodeList(encoded);
         });
       });
+    }
+    
+    function showNum(num) {
+      $('#sortable > li.active').removeClass('active');
+      $('#sortable > li:eq('+(num-1)+')').addClass('active');
+    }
+    function getNum() {
+      downloadData(id, "call", function(num) {
+        $('#callNum').val(num);
+        showNum(num);
+      });
+    }
+    function setNum() {
+      uploadData(id, "call", $('#callNum').val(), getNum);
+    }
+
+    function update() {
+      cacheFile=null;
+      downloadData(id, "data", function(encoded) {
+        if (encoded==null) encoded="";
+        $('#text').val(encoded);
+        decodeList(encoded);
+      });
+      downloadData(id, "title", function(title) {
+        $('#title').text(title);
+        $('#setTitle').val(title);
+      });
+      getNum();
+    }
+    
+    var eta=0;
+    var timer;
+    function countDown() {
+      if (eta<=0) {
+        update();
+        eta = Math.floor(Math.random()*5000+5000);
+      }
+      $('#countTxt').text(Math.floor(eta/100)/10);
+      timer = setTimeout(countDown, 100);
+      eta -= 100;
+    }
+    
+    $(function() {
+      line = window.location.hash.substr(1);
+      segs = line.split("&");
+      segs.forEach(function(seg) {
+        if (seg.substr(0,3)=="pw=") {
+          pw = seg.substr(3);
+        }
+        else {
+          id = seg;
+        }
+      });
+      
+      
+      if (id!="") {
+        downloadData(id, "pw", function(pw1) {
+          pw0 = pw1;
+          if (pw0==null||pw==pw0) {
+            $('#setPW').val(pw0);
+            $('#edit').show();
+            $( "#sortable" ).sortable({stop: sortedCallback});
+            $( "#sortable" ).disableSelection();
+            update();
+          }
+          else {
+            $('#countdown').show();
+            countDown();
+          }
+        });
+      }
+      $('#buttImp').click(function() {
+        decodeList($('#text').val());
+        sortedCallback();
+      });
+      $('#buttrand').click(function() {
+        lines = $('#text').val().split("\n");
+        newlines = '';
+        while (lines.length>0) {
+          rndIdx = Math.floor(Math.random()*lines.length);
+          newlines += lines[rndIdx];
+          if (lines.length>1) newlines+='\n';
+          lines.splice(rndIdx,1);
+        }
+        $('#text').val(newlines);
+        decodeList($('#text').val());
+        sortedCallback();
+      });
+      
+      $('#buttTitle').click(function() {
+        uploadData(id, "title", $('#setTitle').val(), function() {
+          downloadData(id, "title", function(title) {
+            $('#title').text(title);
+          });
+        });
+      });
+      $('#buttPW').click(function() {
+        uploadData(id, "pw", $('#setPW').val(), function() {
+          window.location.reload();
+        });
+      });
+      
+      $('#buttSetNum').click(setNum);
+      $('#buttprev').click(function(){ $('#callNum').val(parseInt($('#callNum').val())-1); setNum(); });
+      $('#buttnext').click(function(){ $('#callNum').val(parseInt($('#callNum').val())+1); setNum(); });
+      
+      $('#countStop').click(function() {clearTimeout(timer);});
+      $('#countNow').click(function() {eta=0;});
     });
   </script>
 </head>
 <body>
-  <ul id="sortable">
-    <li><span class="col">1</span><span class="col">1, 1</span></li>
-    <li><span class="col">2</span><span class="col">Item 2</span></li>
-    <li class="ui-state-defaultt"><span class="col">iii 3</span><span class="col">Item 3</span></li>
-    <li class="ui-state-defaultt"><span class="col">4</span><span class="col">Item 4</span></li>
-  </ul>
+  <h1 id="title"></h1>
+  <ol id="sortable">
+    <li><span class="col">you have to specify id</span></li>
+  </ol>
   
-  <textarea id="test">
-  </textarea>
-  <button id="butt">encode</button>
-  <button id="butt2">decode</button>
-  <button id="butt3">getData</button>
-  <button id="butt4">postData</button>
+  <div id="edit" style="display:none;">
+    call to: <button id="buttprev">prev</button><input type="number" id="callNum" value="0"><button id="buttSetNum">set</button><button id="buttnext">next</button>
+    <br>
+    <textarea id="text"></textarea>
+    <button id="buttImp">import</button>
+    <button id="buttrand">randomize</button>
+    <br>
+    <input type="text" id="setTitle" placeholder="title">
+    <button id="buttTitle">set title</button>
+    <br>
+    <input type="text" id="setPW" placeholder="pw">
+    <button id="buttPW">set pw</button>
+  </div>
+  <div id="countdown" style="display:none;">
+    refresh: <span id="countTxt" style="display:inline-block; width:2em">@@</span>secs<br>
+    <button id="countNow">now</button> <button id="countStop">stop</button>
+  </div>
 </body>
 </html>
