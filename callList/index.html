@@ -63,15 +63,16 @@
     var loading=false;
     function downloadData_real(action=null) {
       //url = 'https://docs.google.com/a/lssh.tp.edu.tw/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/export?format=csv&id=1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA&gid=1446184689';
-      url = 'https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pub?output=csv';
+      //url = 'https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pub?output=csv';
+      url = 'http://wolfdigit.ga/callList/ajax.php';
       ajaxBack = function(data) {
         cacheFile = data;
         if (action!=null) {
           action();
         }
       };
-      //$.get(url, ajaxBack);
-      
+      $.get(url, ajaxBack);
+      /*
       $.ajax({
         type: "GET",
         url: url,
@@ -80,7 +81,7 @@
         crossDomain: true,
         dataType: "text"
       }).done(ajaxBack).always(function(a){console.log(a);});
-      
+      */
     }
     function downloadData(id="id", type="type", action=null) {
       if (cacheFile==null) {
@@ -114,7 +115,8 @@
     function uploadData(id="id", type="type", data=null, action=null) {
       if (!(pw0==null||pw==pw0)) return;
       cacheFile = null;
-      url = 'https://docs.google.com/a/lssh.tp.edu.tw/forms/d/e/1FAIpQLSes7I2sVrDrjNYAXIhLIcpyD1n5o6RYIAkm2Dk3BHqgljjkwg/formResponse';
+      //url = 'https://docs.google.com/a/lssh.tp.edu.tw/forms/d/e/1FAIpQLSes7I2sVrDrjNYAXIhLIcpyD1n5o6RYIAkm2Dk3BHqgljjkwg/formResponse';
+      url = 'http://wolfdigit.ga/callList/ajax.php';
       postData = {'entry.422715126': id, 'entry.673226051': type, 'entry.657943876': encodeURIComponent(data)};
       $.ajax({
         type: "POST",
