@@ -128,12 +128,7 @@
     var pw0=null;
     function sortedCallback(event, ui) {
       $('#text').val(encodeList());
-      uploadData(id, "data", $('#text').val(), function() {
-        downloadData(id, "data", function(encoded) {
-          $('#text').val(encoded);
-          decodeList(encoded);
-        });
-      });
+      uploadData(id, "data", $('#text').val(), update);
     }
     
     function showNum(num) {
