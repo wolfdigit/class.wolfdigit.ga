@@ -30,7 +30,8 @@
   </script>
 -->
   <script>
-    url = 'https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pubhtml?widget=true&amp;headers=false';
+    //url = 'https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pubhtml?widget=true&amp;headers=false';
+    url = 'https://docs.google.com/a/google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/gviz/tq?tq=select%20*';
     action = function(a) {
       console.log(a);
     }; 
@@ -46,6 +47,7 @@
         var xhr = new XMLHttpRequest();
         if ("withCredentials" in xhr){
             xhr.open(method, url, true);
+            //xhr.setRequestHeader("Origin", "null");
         } else if (typeof XDomainRequest != "undefined"){
             xhr = new XDomainRequest();
             xhr.open(method, url);
