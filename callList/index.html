@@ -6,7 +6,7 @@
   <title>叫號機</title>
   
   <style>
-    #sortable { /*list-style-type: none;*/ border-spacing: 0 5px; }
+    #sortable { list-style-type: none; border-spacing: 0 5px; }
     #sortable > li { background-color: azure; }
     #sortable > li.active { background-color: aqua; }
     #sortable > li > .col:first-child { border-top-left-radius: 0.4ex; border-bottom-left-radius: 0.4ex; }
@@ -66,8 +66,8 @@
           action();
         }
       };
-      $.get(url, ajaxBack);
-      /*
+      //$.get(url, ajaxBack);
+      
       $.ajax({
         type: "GET",
         url: url,
@@ -75,8 +75,8 @@
         //complete: ajaxBack
         crossDomain: true,
         dataType: "text"
-      }).done(ajaxBack).always(function(a){console.log(a);});
-      */
+      }).done(ajaxBack); //.always(function(a){console.log(a);});
+      
     }
     function downloadData(id, type, action) {
       if (cacheFile==null) {
@@ -165,7 +165,7 @@
     function countDown() {
       if (eta<=0) {
         update();
-        eta = Math.floor(Math.random()*5000+5000);
+        eta = Math.floor(Math.random()*10000+20000);
       }
       $('#countTxt').text(Math.floor(eta/100)/10);
       timer = setTimeout(countDown, 100);
@@ -238,7 +238,7 @@
       $('#buttnext').click(function(){ $('#callNum').val(parseInt($('#callNum').val())+1); setNum(); });
       
       $('#countStop').click(function() {clearTimeout(timer);});
-      $('#countNow').click(function() {eta=0;});
+      $('#countNow').click(function() {clearTimeout(timer);eta=0;countDown();});
     });
   </script>
 </head>
