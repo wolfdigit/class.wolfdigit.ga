@@ -30,19 +30,23 @@
   </script>
 -->
   <script>
-    //url = 'https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pubhtml?widget=true&amp;headers=false';
-    url = 'https://docs.google.com/a/google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/gviz/tq?tq=select%20*';
+    //url = 'https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pubhtml?widget=true&headers=false';
+    //url = 'https://docs.google.com/a/lssh.tp.edu.tw/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/export?format=csv&id=1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA&gid=1446184689&callback=console.log';
+    //url = 'https://docs.google.com/a/google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/gviz/tq?tq=select%20*';
+    //url = 'https://spreadsheets.google.com/feeds/list/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/od6/public/basic?alt=json';
+    url = 'https://sheets.googleapis.com/v4/spreadsheets/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/values/A1:D55?key=AIzaSyAIRR7s-KaxzgBdxMUa0DSSjEvZ2S9T8Vs';
     action = function(a) {
       console.log(a);
     }; 
-    /*
+    
     $.ajax({
       url: url,
       dataType: 'JSONP',
       type: 'GET',
       crossDomain: true,
     }).always(action);
-    */
+    
+    /*
     function createCORSRequest(method, url){
         var xhr = new XMLHttpRequest();
         if ("withCredentials" in xhr){
@@ -65,6 +69,7 @@
         };
         request.send();
     }
+    */
   </script>
 </body>
 </html>
