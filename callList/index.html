@@ -70,8 +70,8 @@
           action();
         }
       };
-      $.get(url, ajaxBack);
-      /*
+      //$.get(url, ajaxBack);
+      
       $.ajax({
         type: "GET",
         url: url,
@@ -80,7 +80,7 @@
         crossDomain: true,
         dataType: "text"
       }).done(ajaxBack).always(function(a){console.log(a);});
-      */
+      
     }
     function downloadData(id="id", type="type", action=null) {
       if (cacheFile==null) {
