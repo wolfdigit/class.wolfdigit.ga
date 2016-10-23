@@ -1,0 +1,39 @@
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<body>
+  <!--
+  <iframe id='ifrm1' src="https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pubhtml?widget=true&amp;headers=false"></iframe>
+  <iframe src="https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pubhtml"></iframe>
+  <iframe src="https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pub?output=csv"></iframe>-->
+  <div id="msg">
+  </div>
+  <!--
+  <script>
+    $(function() {
+      $('#msg').text($('#ifrm1').html());
+    });
+    
+    
+    $(function() {
+      //websocket = new WebSocket("ws://docs.google.com:9000/daemon.php"); 
+      websocket = new WebSocket("ws://docs.google.com:80/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pub?output=csv"); 
+      message = "GET /spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pub?output=csv HTTP/1.0\r\n\r\n";
+      websocket.onopen = function(evt) { /* do stuff */ }; //on open event
+      websocket.onclose = function(evt) { /* do stuff */ }; //on close event
+      websocket.onmessage = function(evt) { console.log(evt); }; //on message event
+      websocket.onerror = function(evt) { /* do stuff */ }; //on error event
+      //websocket.send(message); //send method
+      websocket.close(); //close method
+    });
+  </script>
+-->
+  <script>
+    $.get('https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pubhtml?widget=true&amp;headers=false', function(a) {
+      console.log(a);
+      
+    });
+  </script>
+</body>
+</html>
