@@ -138,10 +138,11 @@
     
     function showNum(num) {
       $('#sortable > li.active').removeClass('active');
-      $('#sortable > li:eq('+(num-1)+')').addClass('active');
+      if (num>0) $('#sortable > li:eq('+(num-1)+')').addClass('active');
     }
     function getNum() {
       downloadData(id, "call", function(num) {
+        if (num==null) num=0;
         $('#callNum').val(num);
         showNum(num);
       });
