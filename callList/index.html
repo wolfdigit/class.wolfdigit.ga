@@ -186,6 +186,7 @@
         }
         else {
           id = seg;
+          $('body').data('id', seg);
         }
       });
       
@@ -272,7 +273,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
     <script>
       function showQRCode() {
-        url = document.location.protocol +"//"+ document.location.hostname + document.location.pathname + "#" + id;
+        url = document.location.protocol +"//"+ document.location.hostname + document.location.pathname + "#" + $('body').data('id');
         $('#qrcode').qrcode(url);
         $('#qrcodeTxt').text(url);
       }
