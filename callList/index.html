@@ -62,15 +62,16 @@
     var cacheFile=null;
     var loading=false;
     function downloadData_real(action=null) {
-      url = 'https://docs.google.com/a/lssh.tp.edu.tw/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/export?format=csv&id=1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA&gid=1446184689';
+      //url = 'https://docs.google.com/a/lssh.tp.edu.tw/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/export?format=csv&id=1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA&gid=1446184689';
+      url = 'https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pub?output=csv';
       ajaxBack = function(data) {
         cacheFile = data;
         if (action!=null) {
           action();
         }
       };
-      //$.get(url, ajaxBack);
-      
+      $.get(url, ajaxBack);
+      /*
       $.ajax({
         type: "GET",
         url: url,
@@ -79,7 +80,7 @@
         crossDomain: true,
         dataType: "text"
       }).done(ajaxBack).always(function(a){console.log(a);});
-      
+      */
     }
     function downloadData(id="id", type="type", action=null) {
       if (cacheFile==null) {
