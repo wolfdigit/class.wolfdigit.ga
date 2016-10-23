@@ -30,10 +30,39 @@
   </script>
 -->
   <script>
-    $.get('https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pubhtml?widget=true&amp;headers=false', function(a) {
+    url = 'https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pubhtml?widget=true&amp;headers=false';
+    action = function(a) {
       console.log(a);
-      
-    });
+    }; 
+    /*
+    $.ajax({
+      url: url,
+      dataType: 'JSONP',
+      type: 'GET',
+      crossDomain: true,
+    }).always(action);
+    */
+    function createCORSRequest(method, url){
+        var xhr = new XMLHttpRequest();
+        if ("withCredentials" in xhr){
+            xhr.open(method, url, true);
+        } else if (typeof XDomainRequest != "undefined"){
+            xhr = new XDomainRequest();
+            xhr.open(method, url);
+        } else {
+            xhr = null;
+        }
+        return xhr;
+    }
+
+    var request = createCORSRequest("get", url);
+    if (request){
+        request.onload = function(){
+            //do something with request.responseText
+          action(request.responseText);
+        };
+        request.send();
+    }
   </script>
 </body>
 </html>
