@@ -56,7 +56,7 @@
     
     var cacheFile=null;
     var loading=false;
-    function downloadData_real(action=null) {
+    function downloadData_real(action) {
       //url = 'https://docs.google.com/a/lssh.tp.edu.tw/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/export?format=csv&id=1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA&gid=1446184689';
       //url = 'https://docs.google.com/spreadsheets/d/1dScK1gGfviRrR8cZD12ZQFA8bsgJr-RuAQygSqr6faA/pub?output=csv';
       url = 'http://wolfdigit.ga/callList/ajax.php';
@@ -78,7 +78,7 @@
       }).done(ajaxBack).always(function(a){console.log(a);});
       */
     }
-    function downloadData(id="id", type="type", action=null) {
+    function downloadData(id, type, action) {
       if (cacheFile==null) {
         if (!loading) {
           loading = true;
@@ -107,7 +107,7 @@
       }
     }
     
-    function uploadData(id="id", type="type", data=null, action=null) {
+    function uploadData(id, type, data, action) {
       if (!(pw0==null||pw==pw0)) return;
       cacheFile = null;
       //url = 'https://docs.google.com/a/lssh.tp.edu.tw/forms/d/e/1FAIpQLSes7I2sVrDrjNYAXIhLIcpyD1n5o6RYIAkm2Dk3BHqgljjkwg/formResponse';
