@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<title>Hello Strapdown</title>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<xmp theme="readable" style="display:none;">
+</xmp>
+<script>
+url = window.location.href;
+pos = url.indexOf('?');
+if (pos<0) {
+  file = "";
+  meUrl = url;
+}
+else {
+  file = url.substring( pos+1 );
+  meUrl = url.substring( 0, pos-1 );
+}
+if (file=="") file = "index.md";
+document.title = file;
+dir = meUrl.substring(0, meUrl.lastIndexOf("/")+1 );
+$.get( file, function( data ) {
+  $( "xmp" ).html( data );
+  
+  $.getScript("http://strapdownjs.com/v/0.2/strapdown.js").done(function() {
+    $( "#content a" ).each(function() {
+      url = $(this).attr("href");
+      console.log(url);
+      if ( url.match(/\.md$/) ) {
+        pos = url.indexOf("//");
+        if ( pos<0 ) {
+          pos2 = url.lastIndexOf("/");
+          if (pos2<0) {
+             newUrl = meUrl + "?" + url;
+          }
+          else {
+            newUrl = dir + url.substring(0, pos2+1) + "?" + url.substring(pos2+1);
+          }
+          $(this).attr("href", newUrl);
+        }
+      }
+    });
+  });
+}, 'text');
+</script>
+</html>
