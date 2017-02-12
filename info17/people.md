@@ -26,7 +26,7 @@ function parseTable(src, dst){
   str = '';
   lines = code.trim().split("\n");
   for (var i=0; i<lines.length; i++) {
-    cols = line.split("\t");
+    var cols = lines[i].split("\t");
     str += cols.join(' | ') + '\n';
     if (i==0) {
       for (var j=0; j<cols.length; j++) {
