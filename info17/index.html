@@ -19,10 +19,10 @@ if (file=="") file = "index.md";
 document.title = file;
 dir = meUrl.substring(0, meUrl.lastIndexOf("/")+1 );
 $.get( file, function( data ) {
+  while ( (p1=data.indexOf('[[['))>=0 && (p2=data.indexOf(']]]', p1))>=0 ) {
+    data = data.substr(0, p1-1) + translateTable( data.substr(p1+3, p2-p1-3) ) + data.substr(p2+3);
+  }
   $( "xmp" ).html( data );
-  $( "xmp pre.table" ).each(function(){
-    $( this ).html( translateTable($(this).html()) );
-  });
   
   $.getScript("http://strapdownjs.com/v/0.2/strapdown.js").done(function() {
     $( "#content a" ).each(function() {
@@ -42,16 +42,18 @@ $.get( file, function( data ) {
         }
       }
     });
+    
+    if (file=='people.md') replaceIDLinks();
   });
 }, 'text');
 </script>
 <script>
 function translateTable(code) {
-  str = '';
-  lines = code.trim().split("\n");
+  str = '\n';
+  lines = code.replace(/^\n+|\n+$/gm,'').split("\n");
   for (var i=0; i<lines.length; i++) {
-    cols = line.split("\t");
-    str += cols.join(' | ') + '\n';
+    cols = lines[i].split("\t");
+    str += '| ' + cols.join(' | ') + ' |\n';
     if (i==0) {
       for (var j=0; j<cols.length; j++) {
         str += '|---';
@@ -61,5 +63,17 @@ function translateTable(code) {
   }
   return str;
 }
+</script>
+<script>
+  function replaceIDLinks() {
+    $('table tr td:nth-child(4)').each(function(){
+      var orig = $(this).html();
+      $(this).html('<a href="http://tcgs.tc.edu.tw:1218/ShowUserStatistic?account='+orig+'">'+orig+'</a>');
+    });
+    $('table tr td:nth-child(5)').each(function(){
+      var orig = $(this).html();
+      $(this).html('<a href="http://zerojudge.tw/UserStatistic?account='+orig+'">'+orig+'</a>');
+    });
+  }
 </script>
 </html>
