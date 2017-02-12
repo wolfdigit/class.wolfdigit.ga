@@ -20,6 +20,9 @@ document.title = file;
 dir = meUrl.substring(0, meUrl.lastIndexOf("/")+1 );
 $.get( file, function( data ) {
   $( "xmp" ).html( data );
+  $( "xmp pre.table" ).each(function(){
+    $( this ).html( translateTable($(this).html()) );
+  });
   
   $.getScript("http://strapdownjs.com/v/0.2/strapdown.js").done(function() {
     $( "#content a" ).each(function() {
@@ -41,5 +44,22 @@ $.get( file, function( data ) {
     });
   });
 }, 'text');
+</script>
+<script>
+function translateTable(code) {
+  str = '';
+  lines = code.trim().split("\n");
+  for (var i=0; i<lines.length; i++) {
+    cols = line.split("\t");
+    str += cols.join(' | ') + '\n';
+    if (i==0) {
+      for (var j=0; j<cols.length; j++) {
+        str += '|---';
+      }
+      str += '|\n';
+    }
+  }
+  return str;
+}
 </script>
 </html>
