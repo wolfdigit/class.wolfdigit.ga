@@ -20,9 +20,9 @@
 11026	陳宇軒	https://sites.google.com/view/releasecashwatchitfallslowly	rrrivz	rrrivz
 </pre>
 <div id="show"></div>
-<style>
-function parseTable(){
-  code = $('#code').text();
+<script>
+function parseTable(src, dst){
+  code = $(src).text();
   str = '';
   lines = code.trim().split("\n");
   for (var i=0; i<lines.length; i++) {
@@ -35,8 +35,8 @@ function parseTable(){
       str += '|\n';
     }
   }
-  $('#show').html(str);
+  $(dst).html(str);
 }
 
-parseTable();
-</style>
+parseTable('#code', '#show');
+</script>
