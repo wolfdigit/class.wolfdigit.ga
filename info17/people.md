@@ -1,4 +1,4 @@
-<pre style="display:none" id="code">
+<pre class="table">
 	 	 	 GJ	ZJ
 10114	龍映庭	https://sites.google.com/lssh.tp.edu.tw/elf	family90322	family90322
 10121	侯庭硯	https://sites.google.com/lssh.tp.edu.tw/123	u10500005	u10500005
@@ -19,24 +19,3 @@
 11024	張相祈	https://sites.google.com/lssh.tp.edu.tw/ohyeah	archie50412	archie50412
 11026	陳宇軒	https://sites.google.com/view/releasecashwatchitfallslowly	rrrivz	rrrivz
 </pre>
-<div id="show"></div>
-<script>
-function parseTable(src, dst){
-  code = $(src).text();
-  str = '';
-  lines = code.trim().split("\n");
-  for (var i=0; i<lines.length; i++) {
-    var cols = lines[i].split("\t");
-    str += cols.join(' | ') + '\n';
-    if (i==0) {
-      for (var j=0; j<cols.length; j++) {
-        str += '|---';
-      }
-      str += '|\n';
-    }
-  }
-  $(dst).html(str);
-}
-
-parseTable('#code', '#show');
-</script>
