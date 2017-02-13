@@ -18,3 +18,6 @@
 11024	張相祈	https://sites.google.com/lssh.tp.edu.tw/ohyeah	archie50412	archie50412
 11026	陳宇軒	https://sites.google.com/view/releasecashwatchitfallslowly	rrrivz	rrrivz
 ]]]
+
+green judge 進度統計： http://page.wolfdigit.ga/greenJudgeProgress/#info17  
+zero judge 挑題工具：http://page.wolfdigit.ga/zero2solv/
