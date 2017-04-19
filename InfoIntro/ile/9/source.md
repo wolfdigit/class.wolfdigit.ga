@@ -110,8 +110,8 @@
 # ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Pause-3.svg/320px-Pause-3.svg.png)
 # 剩下的
 # 自己看
-- http://ile.tp.edu.tw/source/H-E3/pdf/高中3版-09著作權合理使用.pdf
+- <a href="http://ile.tp.edu.tw/source/H-E3/pdf/高中3版-09著作權合理使用.pdf">http://ile.tp.edu.tw/source/H-E3/pdf/高中3版-09著作權合理使用.pdf</a>
 # 第5頁 之後
 - 參、資訊山下定心猿 \\ 一、避免侵權，合法引用―生活中常見相關示例 \\ 二、謹守原則，合理使用―何謂著作權合理使用？ \\ 三、保護自己，尊重別人―避免侵權與誤觸罰則 \\ 肆、功成圓滿見真如-一、舉一反三 \\ 肆、功成圓滿見真如-四、參考答案
 # 出一道選擇題
-- 各組\\https://goo.gl/forms/a2pEGTlgqDsWvCrx2
+- 各組\\<a href="https://goo.gl/forms/a2pEGTlgqDsWvCrx2">https://goo.gl/forms/a2pEGTlgqDsWvCrx2</a>
