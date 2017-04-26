@@ -44,6 +44,7 @@ $.get( file, function( data ) {
     });
     
     if (file=='people.md') replaceIDLinks();
+    if (file=='pscd.md') replaceIDLinks2();
   });
 }, 'text');
 </script>
@@ -73,6 +74,12 @@ function translateTable(code) {
     $('table tr td:nth-child(5)').each(function(){
       var orig = $(this).html();
       $(this).html('<a href="http://zerojudge.tw/UserStatistic?account='+orig+'">'+orig+'</a>');
+    });
+  }
+  function replaceIDLinks2() {
+    $('table tr td:nth-child(3)').each(function(){
+      var orig = $(this).html();
+      $(this).html('<a href="http://page.wolfdigit.ga/zero2solv/?account='+orig+'">'+orig+'</a>');
     });
   }
 </script>
