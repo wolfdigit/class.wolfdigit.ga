@@ -17,9 +17,18 @@
 
 zero judge 挑題工具：http://page.wolfdigit.ga/zero2solv/  
 UVA 挑題工具： http://page.wolfdigit.ga/next2solv/  
-麗山OJ： http://oj.lssh.tp.edu.tw
+麗山OJ： http://oj.lssh.tp.edu.tw  
+麗山培訓討論區： https://www.facebook.com/groups/583500501688679/
 
 # 重要日程
+
+## IPSC
+https://ipsc.ksp.sk/  
+趣味競賽(?)  
+2017/07/08 10:00 UTC  
+線上的  
+外國的  
+英文的
 
 ## 成大暑期高中生程式設計邀請賽
 http://hspc.csie.ncku.edu.tw/  
@@ -44,7 +53,8 @@ http://tpc.taivs.tp.edu.tw/
 http://contest.cc.ntu.edu.tw/  
 約在十一月上半  
 3人組隊比賽  
-初賽在線上參賽，名額不限
+初賽在線上參賽，名額不限  
+點心和氣球的發源地(?)
 
 ## 全國賽
 如果有搶到北市前十再說。  
