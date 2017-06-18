@@ -19,6 +19,7 @@ zero judge 挑題工具：http://page.wolfdigit.ga/zero2solv/
 
 UVA 挑題工具： http://page.wolfdigit.ga/next2solv/
 
+麗山OJ： http://oj.lssh.tp.edu.tw
 
 # 重要日程
 
@@ -37,6 +38,7 @@ http://hspc.csie.ncku.edu.tw/
 可能會依照能力分成兩組或三組，每個禮拜來一天吧...
 
 ## 北市賽
+http://contest.tp.edu.tw/  
 約在十月下半，校隊取六名
 
 ## 軟體設計競賽
