@@ -11,8 +11,8 @@
 		
 20422	劉育愷	wolfram0811
 		
-20712	何俊諺	
-20730	蘇昱瑋	
+20712	何俊諺	myaatim@gmail.com
+20730	蘇昱瑋	kirksud
 ]]]
 
 zero judge 挑題工具：http://page.wolfdigit.ga/zero2solv/  
