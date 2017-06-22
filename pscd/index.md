@@ -1,18 +1,18 @@
-[[[
-		ZJ
-10229	戴惟	SuperDavid
-10611	張燕梅	u10550087
-10925	詹智皓	achilles255057
+[[[  
+		ZJ  
+10229	戴惟	SuperDavid  
+10611	張燕梅	u10550087  
+10925	詹智皓	achilles255057  
 		
-10708	何培維	hopeiwei
-10714	洪聖博	llaa5566
-10722	游旻凱	u10500105
-10726	萬佳欣	guiltycrown
+10708	何培維	hopeiwei  
+10714	洪聖博	llaa5566  
+10722	游旻凱	u10500105  
+10726	萬佳欣	guiltycrown  
 		
-20422	劉育愷	wolfram0811
+20422	劉育愷	wolfram0811  
 		
-20712	何俊諺	myaatim@gmail.com
-20730	蘇昱瑋	kirksud
+20712	何俊諺	myaatim@gmail.com  
+20730	蘇昱瑋	kirksud  
 ]]]
 
 zero judge 挑題工具：http://page.wolfdigit.ga/zero2solv/  
@@ -39,6 +39,11 @@ http://hspc.csie.ncku.edu.tw/
 ## 麗山106校內培訓
 詳細未定  
 可能會依照能力分成兩組或三組，每個禮拜來一天吧...
+
+## ISSC(東南亞)國際學生程式設計競賽(International Schools Software Competition)台灣初選
+8/19 @東海大學  
+8/4前報名  
+應該會在培訓班裡面再篩一次強者組隊吧
 
 ## 北市賽
 http://contest.tp.edu.tw/  
