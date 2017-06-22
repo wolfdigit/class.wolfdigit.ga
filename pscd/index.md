@@ -41,6 +41,7 @@ http://hspc.csie.ncku.edu.tw/
 可能會依照能力分成兩組或三組，每個禮拜來一天吧...
 
 ## ISSC(東南亞)國際學生程式設計競賽(International Schools Software Competition)台灣初選
+http://www.csroc.org.tw/ISSC/  
 8/19 @東海大學  
 8/4前報名  
 應該會在培訓班裡面再篩一次強者組隊吧
