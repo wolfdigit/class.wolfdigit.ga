@@ -70,3 +70,10 @@ http://contest.cc.ntu.edu.tw/
 http://toi.csie.ntnu.edu.tw/  
 約在3月初  
 名額依照北市賽成績分配
+
+## HP code wars
+http://www.hpcodewars.com.tw/  
+約在四月底  
+水題大賽 (?)
+三人組隊，收一百多隊  
+適合資專全班團報
