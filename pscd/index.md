@@ -1,18 +1,18 @@
 [[[  
 		ZJ	LSOJ  
-10229	戴惟	SuperDavid  
-10611	張燕梅	u10550087  
-10925	詹智皓	achilles255057  
+10229	戴惟	SuperDavid	10500028  
+10611	張燕梅	u10550087	u10550087  
+10925	詹智皓	achilles255057	u10500136  
 		
-10708	何培維	hopeiwei  
+10708	何培維	hopeiwei	u10500091  
 10714	洪聖博	llaa5566	10500097  
 10722	游旻凱	u10500105	u10500105  
-10726	萬佳欣	guiltycrown  
+10726	萬佳欣	guiltycrown	10500109  
 		
-20422	劉育愷	wolfram0811  
+20422	劉育愷	wolfram0811	u10400163  
 		
-20712	何俊諺	myaatim@gmail.com  
-20730	蘇昱瑋	kirksud  
+20712	何俊諺	myaatim@gmail.com	u10400099  
+20730	蘇昱瑋	kirksud	u10400117  
 ]]]
 
 zero judge 挑題工具：http://page.wolfdigit.ga/zero2solv/  
