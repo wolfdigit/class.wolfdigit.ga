@@ -15,6 +15,8 @@
 20730	蘇昱瑋	kirksud	u10400117  
 ]]]
 
+培訓日期與紀錄： https://docs.google.com/document/d/1V_QX4YEFQY679BrKbW-99efTbJi_Ci_qm7Qn-w3SKBU/edit?usp=sharing
+
 zero judge 挑題工具：http://page.wolfdigit.ga/zero2solv/  
 UVA 挑題工具： http://page.wolfdigit.ga/next2solv/  
 麗山OJ： http://oj.lssh.tp.edu.tw  
@@ -37,8 +39,7 @@ http://hspc.csie.ncku.edu.tw/
 報名至7/5或60隊額滿為止
 
 ## 麗山106校內培訓
-詳細未定  
-可能會依照能力分成兩組或三組，每個禮拜來一天吧...
+詳細請看上面連結
 
 ## ISSC(東南亞)國際學生程式設計競賽(International Schools Software Competition)台灣初選
 http://www.csroc.org.tw/ISSC/  
