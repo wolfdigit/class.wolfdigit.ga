@@ -46,7 +46,7 @@ require_once('util.inc.php');
       <div class="row align-items-center">
         <div class="col-md-3 order-1">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="https://unsplash.it/500/500?image=445" alt="">
+            <img class="img-fluid rounded-circle" src="sschool.png" alt="">
           </div>
         </div>
         <div class="col-md-9 order-2">
@@ -67,7 +67,7 @@ require_once('util.inc.php');
       <div class="row align-items-center">
         <div class="col-md-3 order-1">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="https://unsplash.it/500/500?image=445" alt="">
+            <img class="img-fluid rounded-circle" src="sso.png" alt="">
           </div>
         </div>
         <div class="col-md-9 order-2">
@@ -88,7 +88,7 @@ require_once('util.inc.php');
       <div class="row align-items-center">
         <div class="col-md-3 order-1">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="https://unsplash.it/500/500?image=445" alt="">
+            <img class="img-fluid rounded-circle" src="https://img.utdstc.com/icons/256/moodle-.png" alt="">
           </div>
         </div>
         <div class="col-md-9 order-2">
@@ -108,7 +108,7 @@ require_once('util.inc.php');
       <div class="row align-items-center">
         <div class="col-md-3 order-1">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="https://unsplash.it/500/500?image=445" alt="">
+            <img class="img-fluid rounded-circle" src="http://dmll.org.uk/wp-content/uploads/2015/04/google_classroom_logo.jpg" alt="">
           </div>
         </div>
         <div class="col-md-9 order-2">
