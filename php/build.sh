@@ -1,7 +1,7 @@
 #!/bin/sh
 cd "$(dirname "$0")"
 rm -r ../html
-EF="-ef build.sh"
+EF="-ef build.sh -ef build.bat"
 for f in `ls *.inc.php`; do
 	EF="$EF -ef $f"
 done

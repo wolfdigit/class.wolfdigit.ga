@@ -27,6 +27,17 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "taskName": "php2html.bat",
+            "type": "process",
+            "command": "php\\build.bat",
+            "args": [
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
