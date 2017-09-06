@@ -55,6 +55,7 @@ require_once('util.inc.php');
             <p>天下武功 唯快不破</p>
             <p>要把資訊科學好，就要先練成打字神速無影手！<br>
               (大概啦?)</p>
+            <p>打字測驗程式 - <a href="https://drive.google.com/open?id=0B65DH-sSwkNARVJjbHVZSlZxc00">WinWTS</a></p>
             <p>f(n) = 2*n + 30 ， 測5次取較高分的3次平均</p>
           </div>
         </div>

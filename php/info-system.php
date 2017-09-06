@@ -29,7 +29,7 @@ require_once('util.inc.php');
         <div class="col-md-9 order-2">
           <div class="p-5">
             <h2 class="display-4">email</h2>
-            <p>它是google信箱！ <a href="http://gmail.com" target="_blank">http://gmail.com</a></p>
+            <p>它是google信箱！ <a href="http://gmail.com">http://gmail.com</a></p>
             <p>帳號: u106xxxxx@lssh.tp.edu.tw<br>
                預設密碼: 身分證號</p>
             <p>養成收信的好習慣，請拿出手機增加google帳號。<br>
@@ -52,7 +52,7 @@ require_once('util.inc.php');
         <div class="col-md-9 order-2">
           <div class="p-5">
             <h2 class="display-4">校務系統</h2>
-            <p>網址有點難記，你就先記麗山首頁吧 <a href="http://www.lssh.tp.edu.tw" target="_blank">http://www.lssh.tp.edu.tw</a><br>
+            <p>網址有點難記，你就先記麗山首頁吧 <a href="http://www.lssh.tp.edu.tw">http://www.lssh.tp.edu.tw</a><br>
                在學校首頁找到右邊「麗山網路服務」分類裡面的「學生缺曠及成績查詢」就是了</p>
             <p>你們應該有填過新生基本資料了，選社、查成績也都是這裡！</p>
             <p>帳號: 學號(不加u) 106xxxxx<br>
@@ -75,9 +75,9 @@ require_once('util.inc.php');
           <div class="p-5">
             <h2 class="display-4">SSO單一簽入</h2>
             <p>先從校務系統登入，下面的「註冊酷課雲帳號」按鈕</p>
-            <p>註冊完可以用同一個帳號登入 <a href="http://cooc.tp.edu.tw" target="_blank">酷課雲</a>和
-               <a href="http://onlinedb.tp.edu.tw" target="_blank">線上資料庫</a></p>
-            <p>懶人包<a target="_blank" href="https://docs.google.com/presentation/d/14o9nqhGfMycdfG3edKWr2DtIYEQsk7aus_qyil3tXY0/view">在此</a>~</p>
+            <p>註冊完可以用同一個帳號登入 <a href="http://cooc.tp.edu.tw">酷課雲</a>和
+               <a href="http://onlinedb.tp.edu.tw">線上資料庫</a></p>
+            <p>懶人包<a href="https://docs.google.com/presentation/d/14o9nqhGfMycdfG3edKWr2DtIYEQsk7aus_qyil3tXY0/view">在此</a>~</p>
             <p>建議用學校信箱註冊，註冊完後再綁定google登入可以更方便使用</p>
           </div>
         </div>

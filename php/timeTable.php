@@ -28,7 +28,7 @@ require_once('util.inc.php');
             <!--<iframe src="https://docs.google.com/document/d/e/2PACX-1vSW58K6HNsXIr2Z6zhvVxJKW6HVZvd_f1WB85ZWLnCpv2wrGJaKrRUwQIc54c8E6Oy6qvACVCuubePP/pub?embedded=true" width="100%" height="2048" title="1061資訊科技概論進度表 101班、107班" style="border:#EEE solid 1px"></iframe>-->
             <iframe src="https://docs.google.com/document/d/e/2PACX-1vSW58K6HNsXIr2Z6zhvVxJKW6HVZvd_f1WB85ZWLnCpv2wrGJaKrRUwQIc54c8E6Oy6qvACVCuubePP/pub" width="100%" height="1200" title="1061資訊科技概論進度表 101班、107班" style="border:#EEE solid 1px"></iframe>
             <!--<iframe src="https://docs.google.com/document/preview?hgd=1&amp;id=13yQ7Ezk6sygA_PF3ObNMYlKcHgAVYdYlzk0cUcKqcHQ" width="100%" height="1024" title="1052資訊科技概論進度表 104班、105班、106班、107班" frameborder="0"></iframe>-->
-            <a target="_blank" href="https://docs.google.com/document/d/1AxXJxPZ6FFiQH76jo2Jbp5vMemjDocTin8KEfWbsxUM/edit">doc</a>
+            <a href="https://docs.google.com/document/d/1AxXJxPZ6FFiQH76jo2Jbp5vMemjDocTin8KEfWbsxUM/edit">doc</a>
           </div>
         </div>
       </div>
