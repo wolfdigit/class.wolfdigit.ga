@@ -65,7 +65,7 @@ function a($id) {
               <a target="_self" class="nav-link" href="<?=l('info-system.php')?>">麗山資訊系統</a>
             </li>
             <li class="nav-item<?=a(5)?>">
-              <a target="_self" class="nav-link" href="<?=l('info-system.php')?>">旅遊計畫書</a>
+              <a target="_self" class="nav-link" href="<?=l('tour-plan.php')?>">旅遊計畫書</a>
             </li>
             <li class="nav-item<?=a(6)?>">
               <a target="_self" class="nav-link" href="#">TBA...</a>
