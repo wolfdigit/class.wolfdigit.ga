@@ -97,8 +97,8 @@ require_once('util.inc.php');
         <div class="col-md-6 order-2">
           <div class="p-5">
             <h2 class="display-4">旅遊計畫書</h2>
-            <p>放心吧其實沒有要出去玩 :p</p>
-            <p>使用google文件、試算表、簡報等等服務，讓小組合作更方便。</p>
+            <p>放心吧其實沒有真的要出去玩 :p</p>
+            <p>學會使用google文件、試算表、簡報等等服務，讓小組合作更方便。</p>
             <p>當然還要有精美排版啊</p>
           </div>
         </div>

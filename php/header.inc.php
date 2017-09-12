@@ -18,6 +18,16 @@ function a($id) {
 
     <title><?=isset($title)?$title:"老狼的資科概"?></title>
 
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106338304-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106338304-1');
+</script>
+
     <!-- Bootstrap core CSS -->
     <link href="<?=l('vendor/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
 
@@ -55,6 +65,9 @@ function a($id) {
               <a target="_self" class="nav-link" href="<?=l('info-system.php')?>">麗山資訊系統</a>
             </li>
             <li class="nav-item<?=a(5)?>">
+              <a target="_self" class="nav-link" href="<?=l('info-system.php')?>">旅遊計畫書</a>
+            </li>
+            <li class="nav-item<?=a(6)?>">
               <a target="_self" class="nav-link" href="#">TBA...</a>
             </li>
           </ul>
