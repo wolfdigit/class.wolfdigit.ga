@@ -27,6 +27,49 @@
 
     <link href="css/font-zh.css" rel="stylesheet">
 
+    <style>
+      @media (min-width: 992px) {
+        .navbar-expand-lg .navbar-nav-vert {
+          -ms-flex-direction: row;
+          flex-direction: column;
+        }
+      }
+      .navbar-nav-vert {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;                
+      }
+    </style>
+    <style>
+      pre.probRun {
+        background-color: black;
+        color: white;
+        line-height: 1.5em;
+        padding: 1.5em;
+        border-radius: 5px;
+      }
+
+      pre.probRun i {
+        font-style: normal;
+        font-family: inherit;
+        animation: blink-animation 0.8s steps(4, start) infinite;
+        -webkit-animation: blink-animation 0.8s steps(4, start) infinite;
+      }
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+    </style>
     <base target="_blank">
   </head>
 
@@ -58,8 +101,15 @@
             <li class="nav-item active">
               <a target="_self" class="nav-link" href="tour-plan.html">旅遊計畫書</a>
             </li>
-            <li class="nav-item">
-              <a target="_self" class="nav-link" href="#">TBA...</a>
+            <li class="nav-item dropdown">
+              <a target="_self" href="#" id="drop1" class="nav-link dropdown-toggle" data-toggle="dropdown">C語言程式設計<b class="caret"></b></a>
+              <div class="dropdown-menu bg-dark" aria-labelledby="drop1">
+                <ul class="navbar-nav-vert ml-auto" role="menu">
+                  <li class="nav-item"><a target="_self" class="nav-link" href="Cpp-programming/index.html">C++程式設計</a></li>
+                  <li class="nav-item"><a target="_self" class="nav-link" href="Cpp-programming/conditions.html">條件式</a></li>
+                  <li class="nav-item"><a target="_self" class="nav-link" href="Cpp-programming/loops.html">迴圈</a></li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
