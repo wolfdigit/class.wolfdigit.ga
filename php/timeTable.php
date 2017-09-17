@@ -5,7 +5,7 @@ require_once('util.inc.php');
 <?php 
     $title="老狼的資科概";
     $active=2;
-    require( l('header.inc.php') ); 
+    require( 'header.inc.php' ); 
 ?>
     <!-- Header -->
     <header class="masthead" style="background: url('https://unsplash.it/1900/1080?image=668') no-repeat center center scroll">
@@ -35,4 +35,4 @@ require_once('util.inc.php');
     </div>
   </section>
 
-    <?php require( l('footer.inc.php') ); ?>
+    <?php require( 'footer.inc.php' ); ?>
