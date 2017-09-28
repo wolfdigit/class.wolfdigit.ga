@@ -16,6 +16,7 @@
 ]]]
 
 106上學期培訓： http://page.wolfdigit.ga/zero2solv/1061hw.html ~~https://docs.google.com/document/d/1GaJ_9c9jOrR6sY-r3C5pPq1Pap_7pkLMxWs3D4TleZw/edit~~  
+履峰老師的考古題專區： https://sites.google.com/site/hlfgongzuoshi/  
 (106暑期)培訓日期與紀錄： https://docs.google.com/document/d/1V_QX4YEFQY679BrKbW-99efTbJi_Ci_qm7Qn-w3SKBU/edit?usp=sharing
 
 zero judge 挑題工具：http://page.wolfdigit.ga/zero2solv/  
