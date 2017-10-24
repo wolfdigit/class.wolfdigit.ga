@@ -4,7 +4,7 @@ require_once('util.inc.php');
 ?>
 <?php 
     $title="老狼的資科概";
-    $active=array(6,62);
+    $active=array(6,63);
     require( 'header.inc.php' ); 
 ?>
     <!-- Header -->
@@ -53,7 +53,27 @@ require_once('util.inc.php');
 <i>56</i>為偶數"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    cout << "輸入一正整數，判斷此數是否為一個奇數或偶數。" << endl;
+    cout << "請輸入此數：";
+    cin >> n;
+
+    if (n%2==1) {
+        cout << n << "為奇數" << endl;
+    }
+    else {
+        cout << n << "為偶數" << endl;
+    }
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "輸入兩正整數，判斷此二數是否為一個奇數與一個偶數。",
@@ -66,7 +86,27 @@ require_once('util.inc.php');
 <i>55,55</i>不為一個奇數與一個偶數"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+
+    cout << "輸入兩正整數，判斷此二數是否為一個奇數與一個偶數。" << endl;
+    cout << "請輸入此二數：";
+    cin >> a >> b;
+
+    if ((a%2==1&&b%2==0)||(a%2==0&&b%2==1)) {
+        cout << a << "," << b << "恰為一個奇數與一個偶數" << endl;
+    }
+    else {
+        cout << a << "," << b << "不為一個奇數與一個偶數" << endl;
+    }
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "輸入月份（月份為一個正整數），判斷此月份在四季（春、夏、秋或冬）中的哪一季 ？<br>
@@ -167,9 +207,16 @@ require_once('util.inc.php');
     ),
   );
 
+  $probOrder = array(1=>"a1", 2=>"a2", 3=>"a3", 4=>"a4", 5=>"a5", 6=>"a6", 7=>"a7");
+  foreach ($probOrder as $i=>$title) {
+    if (!$title) $title = $i;
+    printProb($contentPhp[$i], $title);
+  }
+  /*
   for ($i=1; $i<count($contentPhp); $i++) {
     printProb($contentPhp[$i], $i);
   }
+  */
 
 
 /*
