@@ -56,17 +56,25 @@
       pre.probRun i {
         font-style: normal;
         font-family: inherit;
-        animation: blink-animation 0.8s steps(4, start) infinite;
-        -webkit-animation: blink-animation 0.8s steps(4, start) infinite;
+        animation: blink-animation 0.8s steps(2, start) infinite;
+        -webkit-animation: blink-animation 0.8s steps(2, start) infinite;
       }
       @keyframes blink-animation {
+        from {
+          color: inherit;
+        }
         to {
-          visibility: hidden;
+          /*visibility: hidden;*/
+          color: gray;
         }
       }
       @-webkit-keyframes blink-animation {
+        from {
+          color: inherit;
+        }
         to {
-          visibility: hidden;
+          /*visibility: hidden;*/
+          color: gray;
         }
       }
     </style>
@@ -78,7 +86,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a target="_self" class="navbar-brand" href=".">老狼的課</a>
+        <a target="_self" class="navbar-brand" href=".">老狼的資科概</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -102,10 +110,11 @@
               <a target="_self" class="nav-link" href="../tour-plan.html">旅遊計畫書</a>
             </li>
             <li class="nav-item dropdown active">
-              <a target="_self" href="#" id="drop1" class="nav-link dropdown-toggle" data-toggle="dropdown">C語言程式設計<b class="caret"></b></a>
+              <a target="_self" href="#" id="drop1" class="nav-link dropdown-toggle" data-toggle="dropdown">C++程式設計<b class="caret"></b></a>
               <div class="dropdown-menu bg-dark" aria-labelledby="drop1">
                 <ul class="navbar-nav-vert ml-auto" role="menu">
                   <li class="nav-item"><a target="_self" class="nav-link" href="../Cpp-programming/index.html">C++程式設計</a></li>
+                  <li class="nav-item"><a target="_self" class="nav-link" href="../Cpp-programming/basic.html">基本題</a></li>
                   <li class="nav-item"><a target="_self" class="nav-link" href="../Cpp-programming/conditions.html">條件式</a></li>
                   <li class="nav-item active"><a target="_self" class="nav-link" href="../Cpp-programming/loops.html">迴圈</a></li>
                 </ul>
@@ -142,35 +151,602 @@
     <div class="row align-items-center">
       <div class="col-md-2 order-1">
         <div class="p-5">
-          <div class="probNum">1</div>
+          <div class="probNum">b1</div>
         </div>
       </div>
       <div class="col-md-10 order-2">
         <div class="p-5">
-          <p>T.B.A.</p>
+          <p>輸入一正整數N，求1+2+3+4+………………+N=?</p>
         </div>
       </div>
     </div>
     <div class="row align-items-center">
-            <div class="col-md-6">
-        <div class="p-1">
-          <pre class="probRun"></pre>
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將讓使用者輸入一正整數，計算出1+2+...+N之總和
+請輸入一正整數N=<i>10</i>
+1+2+...+<i>10</i>=<i>55</i></pre>
         </div>
       </div>
-            <div class="col-md-6">
-        <div class="p-1">
-          <pre class="probRun"></pre>
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將讓使用者輸入一正整數，計算出1+2+...+N之總和
+請輸入一正整數N=<i>100</i>
+1+2+...+<i>100</i>=<i>5050</i></pre>
         </div>
       </div>
           </div>
     <div class="row align-items-center">
       <div class="col-md-12 order-2">
         <div class="p-1">
-          T.B.A.
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum">b2</div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>輸入一正整數N，求1-2+3-4+………………±N=?</p>
         </div>
       </div>
     </div>
-  </div>
+    <div class="row align-items-center">
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將讓使用者輸入一正整數，計算出1-2+...(+-)N之總和
+請輸入一正整數N=<i>15</i>
+1-2+...<i>+15</i>=<i>8</i></pre>
+        </div>
+      </div>
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將讓使用者輸入一正整數，計算出1-2+...(+-)N之總和
+請輸入一正整數N=<i>20</i>
+1-2+...<i>-20</i>=<i>-10</i></pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum">b3</div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>輸入一正整數N，求1 + 1/2 + 2/3 + 3/4 +………………+ (n-1)/n=?</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將讓使用者輸入一正整數，計算出1+1/2+2/3...+(N-1)/N之總和
+請輸入一正整數N=<i>45</i>
+1+1/2+2/3...+(<i>44</i>)/<i>45</i>=<i>41.605045</i></pre>
+        </div>
+      </div>
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將讓使用者輸入一正整數，計算出1+1/2+2/3...+(N-1)1/N之總和
+請輸入一正整數N=<i>5</i>
+1+1/2+2/3...+(<i>4</i>)/<i>5</i>=<i>3.716667</i></pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum">b4</div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>輸入一正整數N，求1+1/2+1/3+1/4+………………+1/n=?</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將讓使用者輸入一正整數，計算出1+1/2+...+1/N之總和
+請輸入一正整數N=<i>10</i>
+1+1/2+...+1/<i>10</i>=<i>2.928968</i></pre>
+        </div>
+      </div>
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將讓使用者輸入一正整數，計算出1+1/2+...+1/N之總和
+請輸入一正整數N=<i>100</i>
+1+1/2+...+1/<i>100</i>=<i>5.187378</i></pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum">b5</div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>輸入一正整數N，求1-1/2+1/3-1/4+………………±1/n=?</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將讓使用者輸入一正整數，計算出1-1/2+1/3-1/4+…(+-)1/n之總和
+請輸入一正整數N=<i>15</i>
+1-1/2+...<i>+</i>1/<i>15</i>=<i>0.725372</i></pre>
+        </div>
+      </div>
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將讓使用者輸入一正整數，計算出1-1/2+1/3-1/4+…(+-)1/n之總和
+請輸入一正整數N=<i>10</i>
+1-1/2+...<i>-</i>1/<i>10</i>=<i>0.645635</i></pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum">b6</div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>讀入10個數字（可正負），列印正值的個數與負值的個數。並依其結果列印訊息“正值多”、“負值多”、“正負值一樣多”。（0算正值）</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">讀入10個數字（可正負），列印正值的個數與負值的個數。
+請輸入第1次數字：<i>10</i>
+請輸入第2次數字：<i>5</i>
+請輸入第3次數字：<i>-3</i>
+請輸入第4次數字：<i>-5</i>
+請輸入第5次數字：<i>-15</i>
+請輸入第6次數字：<i>-99</i>
+請輸入第7次數字：<i>51</i>
+請輸入第8次數字：<i>231</i>
+請輸入第9次數字：<i>87</i>
+請輸入第10次數字：<i>13</i>
+你輸入了<i>6</i>個正數，<i>4</i>個負數。
+<i>正值多</i></pre>
+        </div>
+      </div>
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">讀入10個數字（可正負），列印正值的個數與負值的個數。
+請輸入第1次數字：<i>3</i>
+請輸入第2次數字：<i>4</i>
+請輸入第3次數字：<i>5</i>
+請輸入第4次數字：<i>6</i>
+請輸入第5次數字：<i>7</i>
+請輸入第6次數字：<i>-9</i>
+請輸入第7次數字：<i>-5</i>
+請輸入第8次數字：<i>-7</i>
+請輸入第9次數字：<i>-6</i>
+請輸入第10次數字：<i>-5</i>
+你輸入了<i>5</i>個正數，<i>5</i>個負數。
+<i>正負值一樣多</i></pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum">b7</div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>阿婆賣蛋，七個一數餘二且十一個一數餘二且三個一數餘二，求<10000之內的所有可能結果。</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-12">
+              <div class="p-1">
+          <pre class="probRun">本程式將計算阿婆賣蛋，求<10000的所有可能結果
+可能的結果有：2 233 464 695 926 1157 1388 1619 1850 2081 2312 2543 2774 3005 3236 3467 3698 3929 4160 4391 4622 4853 5084 5315 5546 5777 6008 6239 6470 6701 6932 7163 7394 7625 7856 8087 8318 8549 8780 9011 9242 9473 9704 9935  </pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum">b8</div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>寫一程式計算一組數字的乘積。你的程式必須能夠連續輸入數個整數(以Enter隔開)，當輸入數字為0時，隨即輸出結果，並結束程式。</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將程式計算一組數字的乘積。
+請輸入數字：<i>1</i>
+請輸入數字：<i>2</i>
+請輸入數字：<i>3</i>
+請輸入數字：<i>4</i>
+請輸入數字：<i>5</i>
+請輸入數字：<i>0</i>
+此組數字的乘積為<i>120</i></pre>
+        </div>
+      </div>
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將程式計算一組數字的乘積。
+請輸入數字：<i>-5</i>
+請輸入數字：<i>95</i>
+請輸入數字：<i>32</i>
+請輸入數字：<i>10</i>
+請輸入數字：<i>0</i>
+此組數字的乘積為<i>-152000</i></pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum">b9</div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>輸入兩數字，求最大公因數(GCD)與最小公倍數(LCM)。<br>
+      最小公倍數(LCM)=兩整數相乘 / 最大公因數(GCD)。</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將輸入兩數字，求最大公因數(GCD)與最小公倍數(LCM)。
+請輸入第一個數字：<i>95</i>
+請輸入第二個數字：<i>51</i>
+<i>95,51</i>的最大公因數為<i>1</i> 最小公倍數為<i>4845</i></pre>
+        </div>
+      </div>
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">本程式將輸入兩數字，求最大公因數(GCD)與最小公倍數(LCM)。
+請輸入第一個數字：<i>55</i>
+請輸入第二個數字：<i>99</i>
+<i>55,99</i>的最大公因數為<i>11</i> 最小公倍數為<i>495</i></pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum"><span class="small">b10</span></div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>請輸出四位數（d<sub>1</sub>d<sub>2</sub>d<sub>3</sub>d<sub>4</sub>）中，所有位數總和為9的數值。（即d<sub>1</sub>+d<sub>2</sub>+d<sub>3</sub>+d<sub>4</sub>=9）</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-12">
+              <div class="p-1">
+          <pre class="probRun">請輸出四位數中，所有位數總和為9的數值。
+這些數值有：1008 1017 1026 1035 1044 1053 1062 1071 1080 1107 1116 1125 1134 1143 1152 1161 1170 1206 1215 1224 1233 1242 1251 1260 1305 1314 1323 1332 1341 1350 1404 1413 1422 1431 1440 1503 1512 1521 1530 1602 1611 1620 1701 1710 1800 2007 2016 2025 2034 2043 2052 2061 2070 2106 2115 2124 2133 2142 2151 2160 2205 2214 2223 2232 2241 2250 2304 2313 2322 2331 2340 2403 2412 2421 2430 2502 2511 2520 2601 2610 2700 3006 3015 3024 3033 3042 3051 3060 3105 3114 3123 3132 3141 3150 3204 3213 3222 3231 3240 3303 3312 3321 3330 3402 3411 3420 3501 3510 3600 4005 4014 4023 4032 4041 4050 4104 4113 4122 4131 4140 4203 4212 4221 4230 4302 4311 4320 4401 4410 4500 5004 5013 5022 5031 5040 5103 5112 5121 5130 5202 5211 5220 5301 5310 5400 6003 6012 6021 6030 6102 6111 6120 6201 6210 6300 7002 7011 7020 7101 7110 7200 8001 8010 8100 9000</pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum"><span class="small">b11</span></div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>計算任意正整數Ｎ的階乘值（Ｎ！）。(N<20) (Ｎ！=N*(N-1)*……*2*1)</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">計算任意正整數Ｎ的階乘值（Ｎ！）
+請輸入此正整數=<i>5</i>
+1*2*...*<i>5</i>=<i>120</i></pre>
+        </div>
+      </div>
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">計算任意正整數Ｎ的階乘值（Ｎ！）
+請輸入此正整數=<i>10</i>
+1*2*...*<i>10</i>=<i>3628800</i></pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum"><span class="small">b12</span></div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>計算並列印出2的前20次方之數值。</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-12">
+              <div class="p-1">
+          <pre class="probRun">本程式將計算並列印出2的前20次方之數值。
+2的 1 次方為 2
+2的 2 次方為 4
+2的 3 次方為 8
+2的 4 次方為 16
+2的 5 次方為 32
+2的 6 次方為 64
+2的 7 次方為 128
+2的 8 次方為 256
+2的 9 次方為 512
+2的 10 次方為 1024
+2的 11 次方為 2048
+2的 12 次方為 4096
+2的 13 次方為 8192
+2的 14 次方為 16384
+2的 15 次方為 32768
+2的 16 次方為 65536
+2的 17 次方為 131072
+2的 18 次方為 262144
+2的 19 次方為 524288
+2的 20 次方為 1048576</pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum"><span class="small">b13</span></div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>Fibonacci數列﹦0,1,1,2,3,5,8,13,……<br>
+      即 <i>第I位數﹦第(I-1)位數+第(I-2)位數, I>2</i><br>
+      請列出Fibonacci數列的前25項。</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-12">
+              <div class="p-1">
+          <pre class="probRun">本程式將列出Fibonacci數列的前25項。
+這些數列為：0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 10946 17711 28657 46368</pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum"><span class="small">b14</span></div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>一個數等於它所有的因數和，這種數我們叫它完全數﹝不包括它本身﹞<br>
+      像      6=1+2+3<br>
+              28=1+2+4+7+14<br>
+      請列印出10000之內，所有的完全數。</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-12">
+              <div class="p-1">
+          <pre class="probRun">本程式將列印出10000之內，所有的完全數。
+這些數值有：6 28 496 8128</pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
+</section>
+
+  <section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2 order-1">
+        <div class="p-5">
+          <div class="probNum"><span class="small">b15</span></div>
+        </div>
+      </div>
+      <div class="col-md-10 order-2">
+        <div class="p-5">
+          <p>輸入一正整數，列出此數的所有正因數，並判斷此數字是否為質數？</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">輸入一正整數，列出此數的所有正因數，並判斷此數字是否為質數
+請輸入一個數字:<i>15</i>
+<i>15</i>的因數有:<i>1 3 5 15</i>
+<i>15不為質數</i></pre>
+        </div>
+      </div>
+                  <div class="col-md-6">
+              <div class="p-1">
+          <pre class="probRun">輸入一正整數，列出此數的所有正因數，並判斷此數字是否為質數
+請輸入一個數字:<i>121321</i>
+<i>121321</i>的因數有:<i>1 121321</i>
+<i>121321為質數</i></pre>
+        </div>
+      </div>
+          </div>
+    <div class="row align-items-center">
+      <div class="col-md-12 order-2">
+        <div class="p-1">
+                </div>
+      </div>
+    </div>
+      </div>
 </section>
 
   

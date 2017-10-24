@@ -56,17 +56,25 @@
       pre.probRun i {
         font-style: normal;
         font-family: inherit;
-        animation: blink-animation 0.8s steps(4, start) infinite;
-        -webkit-animation: blink-animation 0.8s steps(4, start) infinite;
+        animation: blink-animation 0.8s steps(2, start) infinite;
+        -webkit-animation: blink-animation 0.8s steps(2, start) infinite;
       }
       @keyframes blink-animation {
+        from {
+          color: inherit;
+        }
         to {
-          visibility: hidden;
+          /*visibility: hidden;*/
+          color: gray;
         }
       }
       @-webkit-keyframes blink-animation {
+        from {
+          color: inherit;
+        }
         to {
-          visibility: hidden;
+          /*visibility: hidden;*/
+          color: gray;
         }
       }
     </style>
@@ -78,7 +86,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a target="_self" class="navbar-brand" href=".">老狼的課</a>
+        <a target="_self" class="navbar-brand" href=".">老狼的資科概</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -102,10 +110,11 @@
               <a target="_self" class="nav-link" href="../tour-plan.html">旅遊計畫書</a>
             </li>
             <li class="nav-item dropdown">
-              <a target="_self" href="#" id="drop1" class="nav-link dropdown-toggle" data-toggle="dropdown">C語言程式設計<b class="caret"></b></a>
+              <a target="_self" href="#" id="drop1" class="nav-link dropdown-toggle" data-toggle="dropdown">C++程式設計<b class="caret"></b></a>
               <div class="dropdown-menu bg-dark" aria-labelledby="drop1">
                 <ul class="navbar-nav-vert ml-auto" role="menu">
                   <li class="nav-item"><a target="_self" class="nav-link" href="../Cpp-programming/index.html">C++程式設計</a></li>
+                  <li class="nav-item"><a target="_self" class="nav-link" href="../Cpp-programming/basic.html">基本題</a></li>
                   <li class="nav-item"><a target="_self" class="nav-link" href="../Cpp-programming/conditions.html">條件式</a></li>
                   <li class="nav-item"><a target="_self" class="nav-link" href="../Cpp-programming/loops.html">迴圈</a></li>
                 </ul>
@@ -120,25 +129,85 @@
       <div class="container">
         <h1 class="display-1 text-white">資訊科技概論</h1>
         <h2 class="display-4 text-white">C++程式設計</h2>
-        <p class="text-white"><del>！＠＄）！＠＃（！？，。＠！『＃！＠＃－＃＠</del></p>
+        <p class="text-white">程式的基本概念以及工具</p>
       </div>
     </div>
   </header>
 
   <!-- Main -->
-  <section>
+      <section>
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-12 order-1">
+        <div class="col-md-3 order-1">
           <div class="p-5">
-            <h2 style="font-size:100px; text-align:center">T.B.A.</h2>
+            <img class="img-fluid rounded-circle" src="https://3.bp.blogspot.com/-FzWn6OaxIAs/UkNSNpMUJfI/AAAAAAAAbhQ/rR3On67pJwA/s1600/CodeBlocks.png" alt="">
           </div>
+        </div>
+        <div class="col-md-9 order-2">
+          <div class="p-5">
+            <h2 class="display-4">code::blocks</h2>
+  <a href="http://www.codeblocks.org/">http://www.codeblocks.org/</a>
+            </div>
         </div>
       </div>
     </div>
   </section>
 
-        <!-- Footer -->
+      <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3 order-1">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="https://img.utdstc.com/icons/256/bloodshed-dev-c-plus-plus.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-9 order-2">
+          <div class="p-5">
+            <h2 class="display-4">dev-c++</h2>
+  <a href="https://sourceforge.net/projects/orwelldevcpp/">https://sourceforge.net/projects/orwelldevcpp/</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3 order-1">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="placeholder.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-9 order-2">
+          <div class="p-5">
+            <h2 class="display-4">編譯與執行</h2>
+  <p>cpp --&gt; exe</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3 order-1">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="placeholder.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-9 order-2">
+          <div class="p-5">
+            <h2 class="display-4">C++入門工具</h2>
+  <a href="http://page.wolfdigit.ga/blockly-c/">http://page.wolfdigit.ga/blockly-c/</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; wolfdigit@LSSH 2017</p>
