@@ -116,7 +116,7 @@ function code2img($c_code, $imgFn="") {
     //echo $html;
     file_put_contents("/tmp/htmlImg.html", $html);
     // https://wkhtmltopdf.org/
-    exec("wkhtmltoimage --width 0 --zoom 1.5 --transparent --format png /tmp/htmlImg.html ".$baseDir.$imgFn);
+    exec("wkhtmltoimage --width 0 --zoom 1.2 --transparent --format png /tmp/htmlImg.html ".$baseDir.$imgFn);
   }
 
   return $imgFn;

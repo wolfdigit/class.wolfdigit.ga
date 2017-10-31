@@ -273,7 +273,67 @@ require_once('util.inc.php');
 <i>121321為質數</i>"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, i, count;
+
+    cout << "輸入一正整數，列出此數的所有正因數，並判斷此數字是否為質數" << endl;
+    cout << "請輸入一個數字:";
+    cin >> n;
+
+    cout << n << "的因數有:";
+    count = 0;
+    for (i=1; i<=n; i+=1) {
+        if (n%i==0) {
+            count += 1;
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    if (count==2) {
+        cout << n << "為質數" << endl;
+    }
+    else {
+        cout << n << "不為質數" << endl;
+    }
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, i, count=0;
+
+    cout << "輸入一正整數，列出此數的所有正因數，並判斷此數字是否為質數" << endl;
+    cout << "請輸入一個數字:";
+    cin >> n;
+
+    cout << n << "的因數有:";
+    for (i=1; i<n; i+=1) {
+        if (n%i==0) {
+            count += 1;
+            cout << i << " ";
+        }
+    }
+    count += 1;
+    cout << n << endl;
+
+    if (count==2) {
+        cout << n << "為質數" << endl;
+    }
+    else {
+        cout << n << "不為質數" << endl;
+    }
+
+    return 0;
+}
+')
     ),
   );
 

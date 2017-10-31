@@ -106,6 +106,81 @@ int main() {
 
     return 0;
 }
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+
+    cout << "輸入兩正整數，判斷此二數是否為一個奇數與一個偶數。" << endl;
+    cout << "請輸入此二數：";
+    cin >> a >> b;
+
+    if ((a+b)%2==1) {
+        cout << a << "," << b << "恰為一個奇數與一個偶數" << endl;
+    }
+    else {
+        cout << a << "," << b << "不為一個奇數與一個偶數" << endl;
+    }
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+
+    cout << "輸入兩正整數，判斷此二數是否為一個奇數與一個偶數。" << endl;
+    cout << "請輸入此二數：";
+    cin >> a >> b;
+
+    if (a%2==1 && b%2==0) {        // a奇 b偶
+        cout << a << "," << b << "恰為一個奇數與一個偶數" << endl;
+    }
+    else {                         // 非 a奇 b偶：a偶b奇、同奇、同偶
+        if (a%2==0 && b%2==1) {      // a偶 b奇
+            cout << a << "," << b << "恰為一個奇數與一個偶數" << endl;
+        }
+        else {                       // 其他
+            cout << a << "," << b << "不為一個奇數與一個偶數" << endl;
+        }
+    }
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+
+    cout << "輸入兩正整數，判斷此二數是否為一個奇數與一個偶數。" << endl;
+    cout << "請輸入此二數：";
+    cin >> a >> b;
+
+    if (a%2==1) {        // a為奇數
+        if (b%2==0) {      // a奇b偶
+            cout << a << "," << b << "恰為一個奇數與一個偶數" << endl;
+        }
+        else {             // a奇b奇
+            cout << a << "," << b << "不為一個奇數與一個偶數" << endl;
+        }
+    }
+    else {               // a為偶數
+        if (b%2==1) {      // a偶b奇
+            cout << a << "," << b << "恰為一個奇數與一個偶數" << endl;
+        }
+        else {             // a偶b偶
+            cout << a << "," << b << "不為一個奇數與一個偶數" << endl;
+        }
+    }
+
+    return 0;
+}
 ')
     ),
     (object)array(
@@ -126,7 +201,36 @@ int main() {
 <i>冬</i>"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+
+    cout << "輸入月份，判斷此月份在四季中的哪一季" << endl;
+    cout << "請輸入月份：";
+    cin >> a;
+
+    if (a==3 || a==4 || a==5) {
+        cout << "春" << endl;
+    }
+    if (a==6 || a==7 || a==8) {
+        cout << "夏" << endl;
+    }
+    if (a==9 || a==10 || a==11) {
+        cout << "秋" << endl;
+    }
+    if (a==12 || a==1 || a==2) {
+        cout << "冬" << endl;
+    }
+    if (a<1 || a>12) {
+        cout << "不要亂打" << endl;
+    }
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "輸入三個整數，找出最大值與最小值。",

@@ -19,20 +19,26 @@ require_once('util.inc.php');
   </header>
 
   <!-- Main -->
-  <?php p("code::blocks", "https://3.bp.blogspot.com/-FzWn6OaxIAs/UkNSNpMUJfI/AAAAAAAAbhQ/rR3On67pJwA/s1600/CodeBlocks.png"); ?>
-  <a href="http://www.codeblocks.org/">http://www.codeblocks.org/</a>
+  <?php p("整合式開發環境", "http://www.jetsonhacks.com/wp-content/uploads/2016/01/codeblocks2.png"); ?>
+  <p>編輯器 editor + 編譯器 compiler + ... </p>
+  <p>Code::Blocks <a href="http://www.codeblocks.org/">http://www.codeblocks.org/</a></p>
+  <p>Dev C++ <a href="https://sourceforge.net/projects/orwelldevcpp/">https://sourceforge.net/projects/orwelldevcpp/</a></p>
   <?php pp(); ?>
 
-  <?php p("dev-c++", "https://img.utdstc.com/icons/256/bloodshed-dev-c-plus-plus.png"); ?>
-  <a href="https://sourceforge.net/projects/orwelldevcpp/">https://sourceforge.net/projects/orwelldevcpp/</a>
+  <?php p("編譯與執行", "http://everyday-tech.com/wp-content/uploads/2013/09/CMD.jpg"); ?>
+  <p>*.cpp 原始碼 (文字檔)<br>
+     → 編譯<br>
+     → *.exe 執行檔 (非文字檔)</p>
   <?php pp(); ?>
 
-  <?php p("編譯與執行"); ?>
-  <p>cpp --&gt; exe</p>
+  <?php p("C++入門工具", "novice tool.png"); ?>
+  <p>整塊積木上面寫的字，你就一字不差整個背起來就是了，就像背英文片語一樣。</p>
+  <p><a href="http://page.wolfdigit.ga/blockly-c/">http://page.wolfdigit.ga/blockly-c/</a></p>
   <?php pp(); ?>
 
-  <?php p("C++入門工具"); ?>
-  <a href="http://page.wolfdigit.ga/blockly-c/">http://page.wolfdigit.ga/blockly-c/</a>
+  <?php p("期末考題庫", "https://image.flaticon.com/icons/png/512/185/185575.png"); ?>
+  <p><a href="conditions.html">條件式</a> (共7題)</p>
+  <p><a href="loops.html">迴圈</a> (共15題)</p>
   <?php pp(); ?>
 
   <?php require( 'footer.inc.php' ); ?>
