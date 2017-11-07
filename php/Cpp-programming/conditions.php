@@ -230,6 +230,35 @@ int main() {
 
     return 0;
 }
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int month;
+
+    cout << "輸入月份，判斷此月份在四季中的哪一季" << endl;
+    cout << "請輸入月份：";
+    cin >> month;
+
+    if (3<=month && month<=5) {
+        cout << "春" << endl;
+    }
+    else if (6<=month && month<=8) {
+        cout << "夏" << endl;
+    }
+    else if (9<=month && month<=11) {
+        cout << "秋" << endl;
+    }
+    else if (month==12 || (1<=month&&month<=2) ) {
+        cout << "冬" << endl;
+    }
+    else {
+        cout << "不要亂打" << endl;
+    }
+
+    return 0;
+}
 ')
     ),
     (object)array(
@@ -243,7 +272,103 @@ int main() {
 (<i>5,5,6</i>)中，最大值為<i>6</i> 最小值為<i>5</i>"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+
+    cout << "輸入三數，找出最大值與最小值。" << endl;
+    cout << "請輸入此三數：";
+    cin >> a >> b >> c;
+
+    cout << "(" << a << "," << b << "," << c << ")中，";
+
+    if (a>=b&&a>=c) {
+        cout << "最大值為" << a;
+    }
+    else if (b>=a&&b>=c) {
+        cout << "最大值為" << b;
+    }
+    else {
+        cout << "最大值為" << c;
+    }
+
+    if (a<=b&&a<=c) {
+        cout << " 最小值為" << a << endl;
+    }
+    else if (b<=a&&b<=c) {
+        cout << " 最小值為" << b << endl;
+    }
+    else {
+        cout << " 最小值為" << c << endl;
+    }
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+
+    cout << "輸入三數，找出最大值與最小值。" << endl;
+    cout << "請輸入此三數：";
+    cin >> a >> b >> c;
+
+    cout << "(" << a << "," << b << "," << c << ")中，";
+
+    if (a>=b&&a>=c) {
+        cout << "最大值為" << a;
+    }
+    if (b>a&&b>=c) {
+        cout << "最大值為" << b;
+    }
+    if (c>b&&c>a) {
+        cout << "最大值為" << c;
+    }
+
+    if (a<=b&&a<=c) {
+        cout << " 最小值為" << a << endl;
+    }
+    if (b<a&&b<=c) {
+        cout << " 最小值為" << b << endl;
+    }
+    if (c<a&&c<b) {
+        cout << " 最小值為" << c << endl;
+    }
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    int max, min;
+
+    cout << "輸入三數，找出最大值與最小值。" << endl;
+    cout << "請輸入此三數：";
+    cin >> a >> b >> c;
+
+    cout << "(" << a << "," << b << "," << c << ")中，";
+
+    max = a;
+    if (b>max) max = b;
+    if (c>max) max = c;
+
+    min = a;
+    if (b<min) min = b;
+    if (c<min) min = c;
+
+    cout << "最大值為" << max << " 最小值為" << min << endl;
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "輸入一個整數，請判斷這個整數為兩位數整數（請考慮99～10 與 -10～-99 兩種狀況）。",
@@ -262,7 +387,27 @@ int main() {
 <i>-355不為</i>兩位數整數"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+
+    cout << "判斷一個輸入的數字是否為兩位數整數" << endl;
+    cout << "請輸入此數字=";
+    cin >> a;
+
+    if ((10<=a&&a<=99) || (-99<=a&&a<=-10)) {
+        cout << a << "為兩位數整數" << endl;
+    }
+    else {
+        cout << a << "不為兩位數整數" << endl;
+    }
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "求個人BMI值？並判斷體位標準與否？<br>
