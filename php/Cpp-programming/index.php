@@ -4,7 +4,7 @@ require_once('util.inc.php');
 ?>
 <?php 
     $title="老狼的資科概";
-    $active=2;
+    $active=array(6,61);
     require( 'header.inc.php' ); 
 ?>
     <!-- Header -->
