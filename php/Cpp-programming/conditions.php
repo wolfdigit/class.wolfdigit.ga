@@ -456,7 +456,7 @@ int main() {
     ),
   );
 
-  $probOrder = array(1=>"a1", 2=>"a2", 3=>"a3", 4=>"a4", 5=>"a5", 6=>"a6", 7=>"a7");
+  $probOrder = array(1=>"a01", 2=>"a02", 3=>"a03", 4=>"a04", 5=>"a05", 6=>"a06", 7=>"a07");
   foreach ($probOrder as $i=>$title) {
     if (!$title) $title = $i;
     printProb($contentPhp[$i], $title);

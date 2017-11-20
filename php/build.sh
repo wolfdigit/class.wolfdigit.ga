@@ -10,7 +10,7 @@ python3 ../php2html.py -o ./ ../html $EF
 echo '<?php \n define ("BUILDIMG", false);' > const.inc.php
 python3 ../php2html.py -o ./ ../html $EF
 
-for f in `ls ../html/Cpp-programming/*.html`; do
-	sed -e 's/charset=\"utf-8\"/charset=\"big-5\"/g' < $f > /tmp/tmp
-	iconv -f utf-8 -t cp950  /tmp/tmp > $f
-done
+#for f in `ls ../html/Cpp-programming/*.html`; do
+#	cat $f | sed -e 's/charset=\"utf-8\"/charset=\"big5\"/g' | sed -e 's/charset=utf-8/charset=big5/g' > /tmp/tmp
+#	iconv -f utf-8 -t cp950  /tmp/tmp > $f
+#done

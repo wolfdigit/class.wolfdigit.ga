@@ -53,7 +53,27 @@ require_once('util.inc.php');
 1+2+...+<i>100</i>=<i>5050</i>"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, sum;
+
+    cout << "本程式將讓使用者輸入一正整數，計算出1+2+...+N之總和" << endl;
+    cout << "請輸入一正整數N=";
+    cin >> n;
+
+    sum = 0;
+    for (int i=1; i<=n; i++) {
+        sum += i;
+    }
+
+    cout << "1+2+...+" << n << "=" << sum << endl;
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "輸入一正整數N，求1-2+3-4+………………±N=?",
@@ -66,7 +86,63 @@ require_once('util.inc.php');
 1-2+...<i>-20</i>=<i>-10</i>"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, sum;
+
+    cout << "本程式將讓使用者輸入一正整數，計算出1-2+...(+-)N之總和" << endl;
+    cout << "請輸入一正整數N=";
+    cin >> n;
+
+    sum = 0;
+    for (int i=1; i<=n; i++) {
+        if (i%2==1) {
+            sum += i;
+        }
+        else {
+            sum -= i;
+        }
+    }
+
+    if (n%2==1) {
+        cout << "1-2+...+" << n << "=" << sum << endl;
+    }
+    else {
+        cout << "1-2+...-" << n << "=" << sum << endl;
+    }
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, sum;
+
+    cout << "本程式將讓使用者輸入一正整數，計算出1-2+...(+-)N之總和" << endl;
+    cout << "請輸入一正整數N=";
+    cin >> n;
+
+    sum = 0;
+    for (int i=1; i<=n; i++) {
+        if (i%2==1) sum += i;
+        else        sum -= i;
+    }
+
+    if (n%2==1) {
+        cout << "1-2+...+" << n << "=" << sum << endl;
+    }
+    else {
+        cout << "1-2+...-" << n << "=" << sum << endl;
+    }
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "輸入一正整數N，求1 + 1/2 + 2/3 + 3/4 +………………+ (n-1)/n=?",
@@ -107,7 +183,7 @@ require_once('util.inc.php');
       "flow" => array(),
       "ans" => array()
     ),
-    (object)array(
+    (object)array(  // b06
       "desc" => "讀入10個數字（可正負），列印正值的個數與負值的個數。並依其結果列印訊息“正值多”、“負值多”、“正負值一樣多”。（0算正值）",
       "run" => array(
 "讀入10個數字（可正負），列印正值的個數與負值的個數。
@@ -138,7 +214,82 @@ require_once('util.inc.php');
 <i>正負值一樣多</i>"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    int count1, count2;
+
+    cout << "讀入10個數字（可正負），列印正值的個數與負值的個數。" << endl;
+
+    count1 = 0;    // 正的個數
+    count2 = 0;    // 負的個數
+    for (int i=1; i<=10; i++) {
+        cout << "請輸入第" << i << "次數字：";
+        cin >> a;
+        if (a>=0) count1 += 1;
+        else      count2 += 1;
+    }
+
+    cout << "你輸入了" << count1 << "個正數，" << count2 << "個負數。" << endl;
+    if (count1>count2) cout << "正值多" << endl;
+    if (count1<count2) cout << "負值多" << endl;
+    if (count1==count2) cout << "正負值一樣多" << endl;
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    int count1, count2;
+
+    cout << "讀入10個數字（可正負），列印正值的個數與負值的個數。" << endl;
+
+    count1 = 0;    // 正的個數
+    for (int i=1; i<=10; i++) {
+        cout << "請輸入第" << i << "次數字：";
+        cin >> a;
+        if (a>=0) count1 += 1;
+    }
+    count2 = 10 - count1;
+
+    cout << "你輸入了" << count1 << "個正數，" << count2 << "個負數。" << endl;
+    if (count1>count2) cout << "正值多" << endl;
+    if (count1<count2) cout << "負值多" << endl;
+    if (count1==count2) cout << "正負值一樣多" << endl;
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    int count;
+
+    cout << "讀入10個數字（可正負），列印正值的個數與負值的個數。" << endl;
+
+    count = 0;    // 正的個數
+    for (int i=1; i<=10; i++) {
+        cout << "請輸入第" << i << "次數字：";
+        cin >> a;
+        if (a>=0) count += 1;
+    }
+
+    cout << "你輸入了" << count << "個正數，" << 10-count << "個負數。" << endl;
+    if (count>5) cout << "正值多" << endl;
+    if (count<5) cout << "負值多" << endl;
+    if (count==5) cout << "正負值一樣多" << endl;
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "阿婆賣蛋，七個一數餘二且十一個一數餘二且三個一數餘二，求<10000之內的所有可能結果。",
@@ -147,7 +298,39 @@ require_once('util.inc.php');
 可能的結果有：2 233 464 695 926 1157 1388 1619 1850 2081 2312 2543 2774 3005 3236 3467 3698 3929 4160 4391 4622 4853 5084 5315 5546 5777 6008 6239 6470 6701 6932 7163 7394 7625 7856 8087 8318 8549 8780 9011 9242 9473 9704 9935  "
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "本程式將計算阿婆賣蛋，求<10000的所有可能結果" << endl;
+
+    cout << "可能的結果有：";
+    for (int n=1; n<=10000; n++) {
+        if (n%7==2 && n%11==2 && n%3==2) cout << n << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "本程式將計算阿婆賣蛋，求<10000的所有可能結果" << endl;
+
+    cout << "可能的結果有：";
+    for (int n=1; n<=10000; n++) {
+        if (n%7==2 && n%11==2 && n%3==2) {
+            cout << n << " ";
+        }
+    }
+    cout << endl;
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "寫一程式計算一組數字的乘積。你的程式必須能夠連續輸入數個整數(以Enter隔開)，當輸入數字為0時，隨即輸出結果，並結束程式。",
@@ -169,7 +352,94 @@ require_once('util.inc.php');
 此組數字的乘積為<i>-152000</i>"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, product;
+
+    cout << "本程式將程式計算一組數字的乘積。" << endl;
+
+    product = 1;
+    for (;;) {
+        cout << "請輸入數字：";
+        cin >> a;
+
+        if (a==0) break;
+        product *= a;
+    }
+
+    cout << "此組數字的乘積為" << product << endl;
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, product;
+
+    cout << "本程式將程式計算一組數字的乘積。" << endl;
+
+    product = 1;
+    while (1) {
+        cout << "請輸入數字：";
+        cin >> a;
+
+        if (a==0) break;
+        product *= a;
+    }
+
+    cout << "此組數字的乘積為" << product << endl;
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, product;
+
+    cout << "本程式將程式計算一組數字的乘積。" << endl;
+
+    product = 1;
+    a = 1;
+    while (a!=0) {
+        product *= a;
+
+        cout << "請輸入數字：";
+        cin >> a;
+    }
+
+    cout << "此組數字的乘積為" << product << endl;
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, product;
+
+    cout << "本程式將程式計算一組數字的乘積。" << endl;
+
+    product = 1;
+    do {
+        cout << "請輸入數字：";
+        cin >> a;
+
+        if (a!=0) product *= a;
+    } while (a!=0);
+
+    cout << "此組數字的乘積為" << product << endl;
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "輸入兩數字，求最大公因數(GCD)與最小公倍數(LCM)。<br>
@@ -339,7 +609,7 @@ int main() {
 
   $probOrder = array();
   for ($i=1; $i<=15; $i++) {
-    $probOrder[$i] = "b".$i;
+    $probOrder[$i] = sprintf("b%02d", $i);
   }
   foreach ($probOrder as $i=>$title) {
     if (!$title) $title = $i;
