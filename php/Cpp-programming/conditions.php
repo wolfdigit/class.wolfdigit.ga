@@ -449,10 +449,66 @@ int main() {
 "本程式將輸入任意三邊長，判斷可否構成三角形？並判斷構成哪一種三角形。
 請輸入三個邊長數值，並以空白鍵隔開：<i>90 20 100</i>
 <i>90 20 100可以</i>構成三角形
-為<i>銳角三角形</i>"
+為<i>鈍角三角形</i>"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cout << "本程式將輸入任意三邊長，判斷可否構成三角形？並判斷構成哪一種三角形。" << endl;
+    cout << "請輸入三個邊長數值，並以空白鍵隔開：";
+    cin >> a >> b >> c;
+
+    if (a+b>c && b+c>a && c+a>b) {
+        cout << a << " " << b << " " << c << "可以構成三角形" << endl;
+        if (a*a==b*b+c*c || b*b==c*c+a*a || c*c==a*a+b*b) {
+            cout << "是為直角三角形" << endl;
+        }
+        else if (a*a>b*b+c*c || b*b>c*c+a*a || c*c>a*a+b*b) {
+            cout << "是為鈍角三角形" << endl;
+        }
+        else {
+            cout << "是為銳角三角形" << endl;
+        }
+    }
+    else {
+        cout << a << " " << b << " " << c << "無法構成三角形" << endl;
+    }
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cout << "本程式將輸入任意三邊長，判斷可否構成三角形？並判斷構成哪一種三角形。" << endl;
+    cout << "請輸入三個邊長數值，並以空白鍵隔開：";
+    cin >> a >> b >> c;
+
+    if (a+b>c && b+c>a && c+a>b) {
+        cout << a << " " << b << " " << c << "可以構成三角形" << endl;
+        if (a*a==b*b+c*c || b*b==c*c+a*a || c*c==a*a+b*b) {
+            cout << "是為直角三角形" << endl;
+        }
+        if (a*a>b*b+c*c || b*b>c*c+a*a || c*c>a*a+b*b) {
+            cout << "是為鈍角三角形" << endl;
+        }
+        if (a*a<b*b+c*c && b*b<c*c+a*a && c*c<a*a+b*b) {
+            cout << "是為銳角三角形" << endl;
+        }
+    }
+    else {
+        cout << a << " " << b << " " << c << "無法構成三角形" << endl;
+    }
+
+    return 0;
+}
+')
     ),
   );
 
