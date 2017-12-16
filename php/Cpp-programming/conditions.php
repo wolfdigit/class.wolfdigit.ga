@@ -429,7 +429,111 @@ int main() {
 <i>肥胖家族</i>"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double m, kg, bmi;
+
+    cout << "本程式將計算BMI，並判斷體位是否標準。" << endl;
+    cout << "請輸入身高（M）：";
+    cin >> m;
+    cout << "請輸入體重（Kg）：";
+    cin >> kg;
+
+    bmi = kg / (m*m);
+    cout << fixed << setprecision(2);
+    cout << "你的身高為" << m*100 << "公分 體重為" << kg << "公斤 BMI=" << bmi << endl;
+
+    if      (            bmi<18.5) cout << "體重過輕" << endl;
+    else if (18.5<=bmi && bmi<=23) cout << "標準體重" << endl;
+    else if (   23<bmi && bmi<25 ) cout << "體重過重" << endl;
+    else                           cout << "肥胖家族" << endl;
+
+    return 0;
+}
+', '
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double m, kg, bmi;
+
+    cout << "本程式將計算BMI，並判斷體位是否標準。" << endl;
+    cout << "請輸入身高（M）：";
+    cin >> m;
+    cout << "請輸入體重（Kg）：";
+    cin >> kg;
+
+    bmi = kg / (m*m);
+    cout << fixed << setprecision(2);
+    cout << "你的身高為" << m*100 << "公分 體重為" << kg << "公斤 BMI=" << bmi << endl;
+
+    if (bmi<18.5) {
+        cout << "體重過輕" << endl;
+    }
+    else if (18.5<=bmi && bmi<=23) {
+        cout << "標準體重" << endl;
+    }
+    else if (23<bmi && bmi<25) {
+        cout << "體重過重" << endl;
+    }
+    else {
+        cout << "肥胖家族" << endl;
+    }
+
+    return 0;
+}
+', '
+#include <stdio.h>
+
+int main() {
+    double m, kg, bmi;
+
+    printf("本程式將計算BMI，並判斷體位是否標準。\n");
+    printf("請輸入身高（M）：");
+    scanf("%lf", &m);
+    printf("請輸入體重（Kg）：");
+    scanf("%lf", &kg);
+
+    bmi = kg / (m*m);
+    printf("你的身高為%.2lf公分 體重為%.2lf公斤 BMI=%.2lf\n", m*100, kg, bmi);
+
+    if      (            bmi<18.5) printf("體重過輕\n");
+    else if (18.5<=bmi && bmi<=23) printf("標準體重\n");
+    else if (   23<bmi && bmi<25 ) printf("體重過重\n");
+    else                           printf("肥胖家族\n");
+
+    return 0;
+}
+', '
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main() {
+    double m, kg, bmi;
+
+    cout << "本程式將計算BMI，並判斷體位是否標準。" << endl;
+    cout << "請輸入身高（M）：";
+    cin >> m;
+    cout << "請輸入體重（Kg）：";
+    cin >> kg;
+
+    bmi = kg / (m*m);
+    printf("你的身高為%.2lf公分 體重為%.2lf公斤 BMI=%.2lf\n", m*100, kg, bmi);
+
+    if      (            bmi<18.5) cout << "體重過輕" << endl;
+    else if (18.5<=bmi && bmi<=23) cout << "標準體重" << endl;
+    else if (   23<bmi && bmi<25 ) cout << "體重過重" << endl;
+    else                           cout << "肥胖家族" << endl;
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "輸入任意三邊長，判斷這三邊長可否構成三角形？並判斷構成哪一種三角形。<br>
