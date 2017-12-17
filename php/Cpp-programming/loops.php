@@ -155,7 +155,68 @@ int main() {
 1+1/2+2/3...+(<i>4</i>)/<i>5</i>=<i>3.716667</i>"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    double sum;
+    cout << "本程式將讓使用者輸入一正整數，計算出1+1/2+2/3...+(N-1)/N之總和" << endl;
+    cout << "請輸入一正整數N=";
+    cin >> n;
+
+    sum = 1.0;
+    for (int i=2; i<=n; i++) {
+        sum += (i - 1.0) / i;
+    }
+    cout << "1+1/2+2/3...+(" << (n-1) << ")/" << n << "=" << sum << endl;
+
+    return 0;
+}
+', '
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int n;
+    double sum;
+    cout << "本程式將讓使用者輸入一正整數，計算出1+1/2+2/3...+(N-1)/N之總和" << endl;
+    cout << "請輸入一正整數N=";
+    cin >> n;
+
+    sum = 1.0;
+    for (int i=2; i<=n; i++) {
+        sum += (i - 1.0) / i;
+    }
+    cout << fixed << setprecision(6);
+    cout << "1+1/2+2/3...+(" << (n-1) << ")/" << n << "=" << sum << endl;
+
+    return 0;
+}
+', '
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int n;
+    double sum;
+    cout << "本程式將讓使用者輸入一正整數，計算出1+1/2+2/3...+(N-1)/N之總和" << endl;
+    cout << "請輸入一正整數N=";
+    cin >> n;
+
+    sum = 1.0;
+    for (int i=2; i<=n; i++) {
+        sum += (i - 1.0) / (double)i;
+    }
+    cout << fixed << setprecision(6);
+    cout << "1+1/2+2/3...+(" << (n-1) << ")/" << n << "=" << sum << endl;
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "輸入一正整數N，求1+1/2+1/3+1/4+………………+1/n=?",
@@ -168,7 +229,66 @@ int main() {
 1+1/2+...+1/<i>100</i>=<i>5.187378</i>"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    double sum;
+    cout << "本程式將讓使用者輸入一正整數，計算出1+1/2+...+1/N之總和" << endl;
+    cout << "請輸入一正整數N=";
+    cin >> n;
+
+    sum = 0.0;
+    for (int i=1; i<=n; i++) {
+        sum += 1.0 / i;
+    }
+    cout << "1+1/2+...+1/" << n << "=" << sum << endl;
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    double sum;
+    cout << "本程式將讓使用者輸入一正整數，計算出1+1/2+...+1/N之總和" << endl;
+    cout << "請輸入一正整數N=";
+    cin >> n;
+
+    sum = 0.0;
+    for (int i=1; i<=n; i++) {
+        sum += 1 / (double)i;
+    }
+    cout << "1+1/2+...+1/" << n << "=" << sum << endl;
+
+    return 0;
+}
+', '
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int n;
+    double sum;
+    cout << "本程式將讓使用者輸入一正整數，計算出1+1/2+...+1/N之總和" << endl;
+    cout << "請輸入一正整數N=";
+    cin >> n;
+
+    sum = 0.0;
+    for (int i=1; i<=n; i++) {
+        sum += 1.0 / i;
+    }
+    cout << fixed << setprecision(6);
+    cout << "1+1/2+...+1/" << n << "=" << sum << endl;
+
+    return 0;
+}
+')
     ),
     (object)array(
       "desc" => "輸入一正整數N，求1-1/2+1/3-1/4+………………±1/n=?",
@@ -181,7 +301,36 @@ int main() {
 1-1/2+...<i>-</i>1/<i>10</i>=<i>0.645635</i>"
       ),
       "flow" => array(),
-      "ans" => array()
+      "ans" => array('
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    double sum;
+    cout << "本程式將讓使用者輸入一正整數，計算出1-1/2+1/3-1/4+…(+-)1/n之總和" << endl;
+    cout << "請輸入一正整數N=";
+    cin >> n;
+
+    sum = 0.0;
+    for (int i=1; i<=n; i++) {
+        if (i%2==1) {
+            sum += 1.0 / i;
+        }
+        else {
+            sum -= 1.0 / i;
+        }
+    }
+    if (n%2==1) {
+        cout << "1+1/2+...+1/" << n << "=" << sum << endl;
+    }
+    else {
+        cout << "1+1/2+...-1/" << n << "=" << sum << endl;
+    }
+
+    return 0;
+}
+')
     ),
     (object)array(  // b06
       "desc" => "讀入10個數字（可正負），列印正值的個數與負值的個數。並依其結果列印訊息“正值多”、“負值多”、“正負值一樣多”。（0算正值）",

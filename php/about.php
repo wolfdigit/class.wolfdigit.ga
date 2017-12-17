@@ -23,7 +23,7 @@ require_once('util.inc.php');
       <div class="row align-items-center">
         <div class="col-md-4 order-1">
           <div class="p-5">
-              <img class="img-fluid rounded-circle" src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.0-9/19702368_10213123793719784_1927600104579679196_n.jpg?oh=11774a32dbd0c7fefb231cfa9665b2bf&oe=5A18EAD3">
+              <img class="img-fluid rounded-circle" src="19780383_10213123793719784_1927600104579679196_o.jpg">
           </div>
         </div>
         <div class="col-md-8 order-2">
