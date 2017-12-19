@@ -511,6 +511,29 @@ int main() {
     cout << "本程式將程式計算一組數字的乘積。" << endl;
 
     product = 1;
+    cout << "請輸入數字：";
+    cin >> a;
+    for (; a!=0; ) {
+        product *= a;
+
+        cout << "請輸入數字：";
+        cin >> a;
+    }
+
+    cout << "此組數字的乘積為" << product << endl;
+
+    return 0;
+}
+', '
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, product;
+
+    cout << "本程式將程式計算一組數字的乘積。" << endl;
+
+    product = 1;
     for (;;) {
         cout << "請輸入數字：";
         cin >> a;
