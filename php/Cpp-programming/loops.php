@@ -868,7 +868,7 @@ int main() {
     a = 0;
     b = 1;
     cout << "0 1";
-    for (int i=0; i<25-2; i++) {
+    for (int i=3; i<=25; i++) {
         c = a + b;
         cout << " " << c;
         a = b;
