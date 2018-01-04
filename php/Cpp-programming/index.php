@@ -21,7 +21,19 @@ require_once('util.inc.php');
   <!-- Main -->
   <?php p("整合式開發環境", "http://www.jetsonhacks.com/wp-content/uploads/2016/01/codeblocks2.png"); ?>
   <p>編輯器 editor + 編譯器 compiler + ... </p>
-  <p>Code::Blocks <a href="http://www.codeblocks.org/">http://www.codeblocks.org/</a></p>
+  <p>
+  Code::Blocks <a href="http://www.codeblocks.org/">http://www.codeblocks.org/</a><br/>
+  下載：<br/>
+  Downloads → Download the binary release → <br/>
+  codeblocks-17.12mingw-setup.exe (安裝檔) <br/>
+  或 <br/>
+  codeblocks-17.12mingw-nosetup.zip (免安裝壓縮包)<br/>
+  中文化：<br/>
+  從<a href="https://translations.launchpad.net/codeblocks/trunk/+pots/codeblocks/zh_TW/+translate">翻譯文件網站</a>(需註冊登入) 或 <a href="codeblocks_zh_TW_20180104.mo">這裡</a>下載.mo檔<br/>
+  放進 C:\Program Files\CodeBlocks\share\CodeBlocks\locale\zh_TW <br/>
+  (C:\Program Files\CodeBlocks是安裝路徑，後面的locale\zh_TW這兩層如果不存在請自行建立資料夾)<br/>
+  然後打開程式找setting→Environment→view裡面勾選Internationlization應該就會看到Chinese了
+  </p>
   <p>Dev C++ <a href="https://sourceforge.net/projects/orwelldevcpp/">https://sourceforge.net/projects/orwelldevcpp/</a></p>
   <?php pp(); ?>
 
