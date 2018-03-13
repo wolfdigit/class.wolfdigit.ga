@@ -8,7 +8,7 @@ for f in `ls *.inc.php`; do
 	EF="$EF -ef $f"
 done
 echo -e '<?php \n define ("BUILDIMG", true);' > const.inc.php
-python3 ../php2html.py -o ./ ../html $EF
+#python3 ../php2html.py -o ./ ../html $EF
 echo -e '<?php \n define ("BUILDIMG", false);' > const.inc.php
 python3 ../php2html.py -o ./ ../html $EF
 

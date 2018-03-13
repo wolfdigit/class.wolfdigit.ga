@@ -12,8 +12,8 @@ require_once('util.inc.php');
     <div class="overlay">
       <div class="container">
         <h1 class="display-1 text-white">資訊科技概論</h1>
-        <h2 class="display-4 text-white">106上 進度表</h2>
-        <p class="text-white"><del>這一頁完全不潮...QQ</del></p>
+        <h2 class="display-4 text-white">106下 進度表</h2>
+        <p class="text-white"><a href="timeTable-1061.php">106上進度表</a></p>
       </div>
     </div>
   </header>
@@ -24,11 +24,9 @@ require_once('util.inc.php');
       <div class="row align-items-center">
         <div class="col-md-12 order-1">
           <div class="p-5">
-            <!--<iframe src="https://docs.google.com/document/preview?id=1AxXJxPZ6FFiQH76jo2Jbp5vMemjDocTin8KEfWbsxUM" width="100%" height="1024" title="1061資訊科技概論進度表 101班、107班" frameborder="0"></iframe>-->
-            <!--<iframe src="https://docs.google.com/document/d/e/2PACX-1vSW58K6HNsXIr2Z6zhvVxJKW6HVZvd_f1WB85ZWLnCpv2wrGJaKrRUwQIc54c8E6Oy6qvACVCuubePP/pub?embedded=true" width="100%" height="2048" title="1061資訊科技概論進度表 101班、107班" style="border:#EEE solid 1px"></iframe>-->
-            <iframe src="https://docs.google.com/document/d/e/2PACX-1vSW58K6HNsXIr2Z6zhvVxJKW6HVZvd_f1WB85ZWLnCpv2wrGJaKrRUwQIc54c8E6Oy6qvACVCuubePP/pub" width="100%" height="1200" title="1061資訊科技概論進度表 101班、107班" style="border:#EEE solid 1px"></iframe>
-            <!--<iframe src="https://docs.google.com/document/preview?hgd=1&amp;id=13yQ7Ezk6sygA_PF3ObNMYlKcHgAVYdYlzk0cUcKqcHQ" width="100%" height="1024" title="1052資訊科技概論進度表 104班、105班、106班、107班" frameborder="0"></iframe>-->
-            <a href="https://docs.google.com/document/d/1AxXJxPZ6FFiQH76jo2Jbp5vMemjDocTin8KEfWbsxUM/edit">doc</a>
+            <!-- <p style="text-align: right"><a href="timeTable-1061.php">1061進度表</a></p> -->
+            <iframe src="https://docs.google.com/document/u/1/d/e/2PACX-1vTGcH6gZFHz87FHdNDzk8VBIXnYeoxLUNyz9HgFCjX3cP9MNTDg6dD6pdAuWYMQ5yB4IVCojUZJfyc9/pub?embedded=true" width="100%" height="1200" title="1061資訊科技概論進度表 101班、107班" style="border:#EEE solid 1px"></iframe>
+            <a href="https://docs.google.com/document/d/1lKajEviULZarY0mpmvEL9fZzRySs81chgY-2CDyrRuM/edit">doc</a>
           </div>
         </div>
       </div>
