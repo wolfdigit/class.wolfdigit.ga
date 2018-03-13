@@ -114,9 +114,9 @@ function code2img($c_code, $imgFn="") {
     $html = ob_get_clean();
     
     //echo $html;
-    file_put_contents("/tmp/htmlImg.html", $html);
+    file_put_contents("htmlImg.html", $html);
     // https://wkhtmltopdf.org/
-    exec("wkhtmltoimage --width 0 --zoom 1.2 --transparent --format png --quality 50 /tmp/htmlImg.html ".$baseDir.$imgFn);
+    exec("wkhtmltoimage --width 0 --zoom 1.2 --transparent --format png --quality 50 htmlImg.html ".$baseDir.$imgFn);
   }
 
   return $imgFn;
