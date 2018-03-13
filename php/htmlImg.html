@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="https://cdn.bootcss.com/highlightjs-line-numbers.js/2.1.0/highlightjs-line-numbers.min.js"></script>
+  <style>
+    td.hljs-ln-numbers {
+        padding-right: 0.5em;
+    }
+  </style>
+</head>
+<body>
+    <pre style="position:absolute; top:0; left:0; margin:0"><code id="c_code" class="cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n, i, count=0;
+
+    cout &lt;&lt; &quot;輸入一正整數，列出此數的所有正因數，並判斷此數字是否為質數&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;請輸入一個數字:&quot;;
+    cin &gt;&gt; n;
+
+    cout &lt;&lt; n &lt;&lt; &quot;的因數有:&quot;;
+    for (i=1; i&lt;n; i+=1) {
+        if (n%i==0) {
+            count += 1;
+            cout &lt;&lt; i &lt;&lt; &quot; &quot;;
+        }
+    }
+    count += 1;
+    cout &lt;&lt; n &lt;&lt; endl;
+
+    if (count==2) {
+        cout &lt;&lt; n &lt;&lt; &quot;為質數&quot; &lt;&lt; endl;
+    }
+    else {
+        cout &lt;&lt; n &lt;&lt; &quot;不為質數&quot; &lt;&lt; endl;
+    }
+
+    return 0;
+}</code></pre>
+    <script>
+        hljs.highlightBlock(document.getElementById('c_code'));
+        hljs.lineNumbersBlock(document.getElementById('c_code'));
+    </script>
+</body>
+</html>
